@@ -104,7 +104,6 @@
 # http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasDescription
 <http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasDescription> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasDescription> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2002/07/owl#Thing> .
-<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasDescription> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
 <http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasDescription> <http://www.w3.org/2000/01/rdf-schema#comment> "Stores a textual description."@en .
 <http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasDescription> <http://www.w3.org/2000/01/rdf-schema#label> "has description"@en .
 # 
@@ -568,87 +567,87 @@ _:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # #################################################################
 # 
 # 
-<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#i> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Variable> .
-<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#r> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Variable> .
 <http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#d> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Variable> .
 <http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#m> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Variable> .
-_:genid15 <http://www.w3.org/2000/01/rdf-schema#comment> "If a device has a manufacturer, the inverse manufacturing relation can be inferred."@en .
-_:genid15 <http://www.w3.org/2000/01/rdf-schema#label> "Rule 2 - Manufacturers manufacture their devices"@en .
-_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Imp> .
-_:genid15 <http://www.w3.org/2003/11/swrl#body> _:genid18 .
-_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid16 .
-_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#i> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Variable> .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#r> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Variable> .
+_:genid13 <http://www.w3.org/2000/01/rdf-schema#comment> "If a device has risk class III, then it is inferred as a high risk device."@en .
+_:genid13 <http://www.w3.org/2000/01/rdf-schema#label> "Rule 1 - Class III devices are high risk devices"@en .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Imp> .
+_:genid13 <http://www.w3.org/2003/11/swrl#body> _:genid16 .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid14 .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid15 .
+_:genid15 <http://www.w3.org/2003/11/swrl#argument2> <http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#RiskClass_III> .
+_:genid15 <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#d> .
+_:genid15 <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasRiskClass> .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
 _:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid17 .
 _:genid17 <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#d> .
 _:genid17 <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Device> .
 _:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#ClassAtom> .
 _:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid13 <http://www.w3.org/2003/11/swrl#head> _:genid18 .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
 _:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid19 .
-_:genid19 <http://www.w3.org/2003/11/swrl#argument2> <http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#m> .
 _:genid19 <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#d> .
-_:genid19 <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasManufacturer> .
-_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> .
+_:genid19 <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#HighRiskDevice> .
+_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#ClassAtom> .
 _:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
-_:genid15 <http://www.w3.org/2003/11/swrl#head> _:genid20 .
-_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid21 .
-_:genid21 <http://www.w3.org/2003/11/swrl#argument2> <http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#d> .
-_:genid21 <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#m> .
-_:genid21 <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#manufacturesDevice> .
-_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> .
-_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
-_:genid22 <http://www.w3.org/2000/01/rdf-schema#comment> "If a device has risk class III, then it is inferred as a high risk device."@en .
-_:genid22 <http://www.w3.org/2000/01/rdf-schema#label> "Rule 1 - Class III devices are high risk devices"@en .
-_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Imp> .
-_:genid22 <http://www.w3.org/2003/11/swrl#body> _:genid25 .
+_:genid20 <http://www.w3.org/2000/01/rdf-schema#comment> "If an incident is related to a critical risk, it is inferred as a high priority incident."@en .
+_:genid20 <http://www.w3.org/2000/01/rdf-schema#label> "Rule 3 - Critical risks generate high priority incidents"@en .
+_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Imp> .
+_:genid20 <http://www.w3.org/2003/11/swrl#body> _:genid25 .
 _:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid23 .
-_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid21 .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid22 .
+_:genid22 <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#r> .
+_:genid22 <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#CriticalRisk> .
+_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#ClassAtom> .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
 _:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid24 .
-_:genid24 <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#d> .
-_:genid24 <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Device> .
-_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#ClassAtom> .
+_:genid24 <http://www.w3.org/2003/11/swrl#argument2> <http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#r> .
+_:genid24 <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#i> .
+_:genid24 <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#relatedToRisk> .
+_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> .
 _:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
 _:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid26 .
-_:genid26 <http://www.w3.org/2003/11/swrl#argument2> <http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#RiskClass_III> .
-_:genid26 <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#d> .
-_:genid26 <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasRiskClass> .
-_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> .
+_:genid26 <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#i> .
+_:genid26 <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Incident> .
+_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#ClassAtom> .
 _:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
-_:genid22 <http://www.w3.org/2003/11/swrl#head> _:genid27 .
+_:genid20 <http://www.w3.org/2003/11/swrl#head> _:genid27 .
 _:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
 _:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid28 .
-_:genid28 <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#d> .
-_:genid28 <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#HighRiskDevice> .
+_:genid28 <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#i> .
+_:genid28 <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#HighPriorityIncident> .
 _:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#ClassAtom> .
 _:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
-_:genid6 <http://www.w3.org/2000/01/rdf-schema#comment> "If an incident is related to a critical risk, it is inferred as a high priority incident."@en .
-_:genid6 <http://www.w3.org/2000/01/rdf-schema#label> "Rule 3 - Critical risks generate high priority incidents"@en .
+_:genid6 <http://www.w3.org/2000/01/rdf-schema#comment> "If a device has a manufacturer, the inverse manufacturing relation can be inferred."@en .
+_:genid6 <http://www.w3.org/2000/01/rdf-schema#label> "Rule 2 - Manufacturers manufacture their devices"@en .
 _:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Imp> .
-_:genid6 <http://www.w3.org/2003/11/swrl#body> _:genid11 .
-_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid9 .
+_:genid6 <http://www.w3.org/2003/11/swrl#body> _:genid9 .
 _:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid7 .
 _:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
 _:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid8 .
-_:genid8 <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#r> .
-_:genid8 <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#CriticalRisk> .
-_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#ClassAtom> .
+_:genid8 <http://www.w3.org/2003/11/swrl#argument2> <http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#m> .
+_:genid8 <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#d> .
+_:genid8 <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasManufacturer> .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> .
 _:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
 _:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid10 .
-_:genid10 <http://www.w3.org/2003/11/swrl#argument2> <http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#r> .
-_:genid10 <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#i> .
-_:genid10 <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#relatedToRisk> .
-_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> .
+_:genid10 <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#d> .
+_:genid10 <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Device> .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#ClassAtom> .
 _:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid6 <http://www.w3.org/2003/11/swrl#head> _:genid11 .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
 _:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid12 .
-_:genid12 <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#i> .
-_:genid12 <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Incident> .
-_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#ClassAtom> .
+_:genid12 <http://www.w3.org/2003/11/swrl#argument2> <http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#d> .
+_:genid12 <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#m> .
+_:genid12 <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#manufacturesDevice> .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> .
 _:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
-_:genid6 <http://www.w3.org/2003/11/swrl#head> _:genid13 .
-_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid14 .
-_:genid14 <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#i> .
-_:genid14 <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#HighPriorityIncident> .
-_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#ClassAtom> .
-_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
 # Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

@@ -1,0 +1,1592 @@
+{
+  "_comment" : "Created with OWL2VOWL (version 0.3.5), http://vowl.visualdataweb.org",
+  "header" : {
+    "languages" : [ "en" ],
+    "baseIris" : [ "http://www.w3.org/1999/02/22-rdf-syntax-ns", "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2", "http://www.w3.org/2000/01/rdf-schema", "http://www.w3.org/2001/XMLSchema" ],
+    "iri" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2",
+    "labels" : {
+      "en" : "Medical devices ontology for Exercise 2"
+    },
+    "comments" : {
+      "en" : "OWL-DL ontology for high-risk medical devices and in vitro diagnostics based on the CSV files provided in the assignment."
+    }
+  },
+  "namespace" : [ ],
+  "class" : [ {
+    "id" : "8",
+    "type" : "owl:Class"
+  }, {
+    "id" : "16",
+    "type" : "owl:Class"
+  }, {
+    "id" : "17",
+    "type" : "owl:Class"
+  }, {
+    "id" : "33",
+    "type" : "owl:Class"
+  }, {
+    "id" : "36",
+    "type" : "owl:Class"
+  }, {
+    "id" : "40",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "41",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "42",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "43",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "44",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "45",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "46",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "47",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "50",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "51",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "39",
+    "type" : "owl:Class"
+  }, {
+    "id" : "23",
+    "type" : "owl:Class"
+  }, {
+    "id" : "1",
+    "type" : "owl:Class"
+  }, {
+    "id" : "10",
+    "type" : "owl:Class"
+  }, {
+    "id" : "75",
+    "type" : "owl:Class"
+  }, {
+    "id" : "60",
+    "type" : "owl:Class"
+  }, {
+    "id" : "12",
+    "type" : "owl:Class"
+  }, {
+    "id" : "25",
+    "type" : "owl:Class"
+  }, {
+    "id" : "26",
+    "type" : "owl:Class"
+  }, {
+    "id" : "18",
+    "type" : "owl:Class"
+  }, {
+    "id" : "5",
+    "type" : "owl:Class"
+  }, {
+    "id" : "7",
+    "type" : "owl:Class"
+  }, {
+    "id" : "11",
+    "type" : "owl:Class"
+  }, {
+    "id" : "9",
+    "type" : "owl:Class"
+  }, {
+    "id" : "13",
+    "type" : "owl:Class"
+  }, {
+    "id" : "93",
+    "type" : "owl:Class"
+  }, {
+    "id" : "4",
+    "type" : "owl:Class"
+  }, {
+    "id" : "49",
+    "type" : "owl:Class"
+  }, {
+    "id" : "85",
+    "type" : "owl:Class"
+  }, {
+    "id" : "56",
+    "type" : "owl:Class"
+  }, {
+    "id" : "63",
+    "type" : "owl:Class"
+  }, {
+    "id" : "70",
+    "type" : "owl:Class"
+  }, {
+    "id" : "30",
+    "type" : "owl:Class"
+  }, {
+    "id" : "72",
+    "type" : "owl:Class"
+  }, {
+    "id" : "61",
+    "type" : "owl:Class"
+  }, {
+    "id" : "2",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "15",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "99",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "102",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "92",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "20",
+    "type" : "owl:Class"
+  }, {
+    "id" : "54",
+    "type" : "owl:Class"
+  }, {
+    "id" : "55",
+    "type" : "owl:Class"
+  }, {
+    "id" : "62",
+    "type" : "owl:Class"
+  }, {
+    "id" : "58",
+    "type" : "owl:Class"
+  } ],
+  "classAttribute" : [ {
+    "iri" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#DeviceType",
+    "baseIri" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "DeviceType",
+      "en" : "Device Type"
+    },
+    "subClasses" : [ "10", "11", "12", "13" ],
+    "comment" : {
+      "en" : "Represents a category of medical device."
+    },
+    "id" : "8",
+    "superClasses" : [ "9" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#RegulatoryFramework",
+    "baseIri" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "RegulatoryFramework",
+      "en" : "Regulatory Framework"
+    },
+    "subClasses" : [ "17", "18" ],
+    "comment" : {
+      "en" : "Represents the regulatory framework under which a device is classified."
+    },
+    "id" : "16",
+    "superClasses" : [ "9" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#IVDRFramework",
+    "baseIri" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "IVDRFramework",
+      "en" : "IVDR Framework"
+    },
+    "comment" : {
+      "en" : "Represents the IVDR (EU 2017/746) regulatory framework."
+    },
+    "id" : "17",
+    "superClasses" : [ "16" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#MalfunctionRisk",
+    "baseIri" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "MalfunctionRisk",
+      "en" : "Malfunction Risk"
+    },
+    "comment" : {
+      "en" : "Represents a technical malfunction risk."
+    },
+    "id" : "33",
+    "superClasses" : [ "25" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#SafetyAlertAction",
+    "baseIri" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "SafetyAlertAction",
+      "en" : "Safety Alert Action"
+    },
+    "individuals" : [ {
+      "iri" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#FSCA_001",
+      "baseIri" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2",
+      "comment" : {
+        "en" : "Corrective action instance created from acciones_correctivas.csv."
+      },
+      "labels" : {
+        "IRI-based" : "FSCA_001",
+        "en" : "FSCA-001"
+      }
+    } ],
+    "comment" : {
+      "en" : "Represents a safety alert as corrective action."
+    },
+    "id" : "36",
+    "superClasses" : [ "23" ]
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "40",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "41",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "42",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#date",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "43",
+    "label" : {
+      "IRI-based" : "date"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "44",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "45",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "46",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "47",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "50",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "51",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Device",
+    "baseIri" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Device",
+      "en" : "Device1"
+    },
+    "individuals" : [ {
+      "iri" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#HeartMate3_LVAD",
+      "baseIri" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2",
+      "comment" : {
+        "en" : "Device instance created from dispositivos.csv."
+      },
+      "labels" : {
+        "IRI-based" : "HeartMate3_LVAD",
+        "en" : "HeartMate 3 LVAD"
+      }
+    } ],
+    "subClasses" : [ "56" ],
+    "comment" : {
+      "en" : "Represents a medical device registered in the catalogue."
+    },
+    "id" : "39",
+    "superClasses" : [ "9" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#CorrectiveAction",
+    "baseIri" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "CorrectiveAction",
+      "en" : "Corrective Action"
+    },
+    "individuals" : [ {
+      "iri" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#FSCA_001",
+      "baseIri" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2",
+      "comment" : {
+        "en" : "Corrective action instance created from acciones_correctivas.csv."
+      },
+      "labels" : {
+        "IRI-based" : "FSCA_001",
+        "en" : "FSCA-001"
+      }
+    } ],
+    "subClasses" : [ "61", "62", "36", "63" ],
+    "comment" : {
+      "en" : "Represents a field safety corrective action linked to an incident."
+    },
+    "id" : "23",
+    "superClasses" : [ "9" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Manufacturer",
+    "baseIri" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Manufacturer",
+      "en" : "Manufacturer1"
+    },
+    "individuals" : [ {
+      "iri" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Medtronic_plc",
+      "baseIri" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2",
+      "comment" : {
+        "en" : "Manufacturer instance created from fabricantes.csv."
+      },
+      "labels" : {
+        "IRI-based" : "Medtronic_plc",
+        "en" : "Medtronic plc"
+      }
+    } ],
+    "comment" : {
+      "en" : "Represents a manufacturer of medical devices."
+    },
+    "id" : "1",
+    "superClasses" : [ "9" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#ActiveDevice",
+    "baseIri" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ActiveDevice",
+      "en" : "Active Device"
+    },
+    "comment" : {
+      "en" : "Represents a device that depends on an energy source."
+    },
+    "id" : "10",
+    "superClasses" : [ "8" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#InfectionRisk",
+    "baseIri" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "InfectionRisk",
+      "en" : "Infection Risk"
+    },
+    "comment" : {
+      "en" : "Represents a clinical infection risk."
+    },
+    "id" : "75",
+    "superClasses" : [ "30" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#ClassI",
+    "baseIri" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ClassI",
+      "en" : "Class I"
+    },
+    "comment" : {
+      "en" : "Represents the lowest MDR risk class."
+    },
+    "id" : "60",
+    "superClasses" : [ "55" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#ReusableDevice",
+    "baseIri" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ReusableDevice",
+      "en" : "Reusable Device"
+    },
+    "comment" : {
+      "en" : "Represents a device intended for repeated use."
+    },
+    "id" : "12",
+    "superClasses" : [ "8" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#TechnicalRisk",
+    "baseIri" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "TechnicalRisk",
+      "en" : "Technical Risk"
+    },
+    "subClasses" : [ "33" ],
+    "comment" : {
+      "en" : "Represents a technical risk category."
+    },
+    "id" : "25",
+    "superClasses" : [ "26" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#RiskType",
+    "baseIri" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "RiskType",
+      "en" : "Risk Type"
+    },
+    "subClasses" : [ "25", "30" ],
+    "comment" : {
+      "en" : "Represents a category of risk."
+    },
+    "id" : "26",
+    "superClasses" : [ "9" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#MDRFramework",
+    "baseIri" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "MDRFramework",
+      "en" : "MDR Framework"
+    },
+    "individuals" : [ {
+      "iri" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Framework_MDR",
+      "baseIri" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2",
+      "comment" : {
+        "en" : "Individual representing MDR (EU 2017/745)."
+      },
+      "labels" : {
+        "IRI-based" : "Framework_MDR",
+        "en" : "MDR framework"
+      }
+    } ],
+    "comment" : {
+      "en" : "Represents the MDR (EU 2017/745) regulatory framework."
+    },
+    "id" : "18",
+    "superClasses" : [ "16" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#IncidentType",
+    "baseIri" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "IncidentType",
+      "en" : "Incident Type"
+    },
+    "subClasses" : [ "20", "4" ],
+    "comment" : {
+      "en" : "Represents a category of incident."
+    },
+    "id" : "5",
+    "superClasses" : [ "9" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Incident",
+    "baseIri" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Incident",
+      "en" : "Incident"
+    },
+    "individuals" : [ {
+      "iri" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Incident_INC001",
+      "baseIri" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2",
+      "comment" : {
+        "en" : "Incident instance created from incidentes.csv."
+      },
+      "labels" : {
+        "IRI-based" : "Incident_INC001",
+        "en" : "INC-001"
+      }
+    } ],
+    "subClasses" : [ "85" ],
+    "comment" : {
+      "en" : "Represents an incident notified for a specific medical device."
+    },
+    "id" : "7",
+    "superClasses" : [ "9" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#ImplantableDevice",
+    "baseIri" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ImplantableDevice",
+      "en" : "Implantable Device"
+    },
+    "comment" : {
+      "en" : "Represents a device intended to be implanted."
+    },
+    "id" : "11",
+    "superClasses" : [ "8" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#MedicalEntity",
+    "baseIri" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "MedicalEntity",
+      "en" : "Medical Entity"
+    },
+    "subClasses" : [ "1", "49", "39", "55", "23", "8", "26", "5", "16", "7" ],
+    "comment" : {
+      "en" : "Top class for the main entities represented in the ontology."
+    },
+    "id" : "9"
+  }, {
+    "iri" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#IVDDevice",
+    "baseIri" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "IVDDevice",
+      "en" : "IVD Device"
+    },
+    "comment" : {
+      "en" : "Represents an in vitro diagnostic device."
+    },
+    "id" : "13",
+    "superClasses" : [ "8" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#ClassIIb",
+    "baseIri" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ClassIIb",
+      "en" : "Class IIb"
+    },
+    "comment" : {
+      "en" : "Represents MDR risk class IIb."
+    },
+    "id" : "93",
+    "superClasses" : [ "55" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#NonSeriousIncident",
+    "baseIri" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "NonSeriousIncident",
+      "en" : "Non-Serious Incident"
+    },
+    "comment" : {
+      "en" : "Represents a non-serious incident category."
+    },
+    "id" : "4",
+    "superClasses" : [ "5" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Risk",
+    "baseIri" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Risk",
+      "en" : "Risk1"
+    },
+    "individuals" : [ {
+      "iri" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Thrombosis_DeviceRelated",
+      "baseIri" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2",
+      "comment" : {
+        "en" : "Risk instance created from riesgos.csv."
+      },
+      "labels" : {
+        "IRI-based" : "Thrombosis_DeviceRelated",
+        "en" : "Thrombosis - device-related"
+      }
+    } ],
+    "subClasses" : [ "72" ],
+    "comment" : {
+      "en" : "Represents a risk identified for a medical device."
+    },
+    "id" : "49",
+    "superClasses" : [ "9" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#HighPriorityIncident",
+    "baseIri" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "HighPriorityIncident",
+      "en" : "High Priority Incident"
+    },
+    "individuals" : [ {
+      "iri" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Incident_INC001",
+      "baseIri" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2",
+      "comment" : {
+        "en" : "Incident instance created from incidentes.csv."
+      },
+      "labels" : {
+        "IRI-based" : "Incident_INC001",
+        "en" : "INC-001"
+      }
+    } ],
+    "comment" : {
+      "en" : "Represents an incident inferred as high priority."
+    },
+    "id" : "85",
+    "superClasses" : [ "7" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#HighRiskDevice",
+    "baseIri" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "HighRiskDevice",
+      "en" : "High Risk Device"
+    },
+    "individuals" : [ {
+      "iri" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#HeartMate3_LVAD",
+      "baseIri" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2",
+      "comment" : {
+        "en" : "Device instance created from dispositivos.csv."
+      },
+      "labels" : {
+        "IRI-based" : "HeartMate3_LVAD",
+        "en" : "HeartMate 3 LVAD"
+      }
+    } ],
+    "comment" : {
+      "en" : "Represents a device inferred as high risk."
+    },
+    "id" : "56",
+    "superClasses" : [ "39" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#UserNoticeAction",
+    "baseIri" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "UserNoticeAction",
+      "en" : "User Notice Action"
+    },
+    "comment" : {
+      "en" : "Represents a user notice as corrective action."
+    },
+    "id" : "63",
+    "superClasses" : [ "23" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#InjuryRisk",
+    "baseIri" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "InjuryRisk",
+      "en" : "Injury Risk"
+    },
+    "comment" : {
+      "en" : "Represents a clinical injury risk."
+    },
+    "id" : "70",
+    "superClasses" : [ "30" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#ClinicalRisk",
+    "baseIri" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ClinicalRisk",
+      "en" : "Clinical Risk"
+    },
+    "subClasses" : [ "70", "75" ],
+    "comment" : {
+      "en" : "Represents a clinical risk category."
+    },
+    "id" : "30",
+    "superClasses" : [ "26" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#CriticalRisk",
+    "baseIri" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "CriticalRisk",
+      "en" : "Critical Risk"
+    },
+    "individuals" : [ {
+      "iri" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Thrombosis_DeviceRelated",
+      "baseIri" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2",
+      "comment" : {
+        "en" : "Risk instance created from riesgos.csv."
+      },
+      "labels" : {
+        "IRI-based" : "Thrombosis_DeviceRelated",
+        "en" : "Thrombosis - device-related"
+      }
+    } ],
+    "comment" : {
+      "en" : "Represents a risk with critical severity."
+    },
+    "id" : "72",
+    "superClasses" : [ "49" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#InSituCorrectionAction",
+    "baseIri" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "InSituCorrectionAction",
+      "en" : "In Situ Correction Action"
+    },
+    "comment" : {
+      "en" : "Represents an in-situ correction as corrective action."
+    },
+    "id" : "61",
+    "superClasses" : [ "23" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "2",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "15",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "99",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "102",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#date",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "92",
+    "label" : {
+      "IRI-based" : "date"
+    }
+  }, {
+    "iri" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#SeriousIncident",
+    "baseIri" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "SeriousIncident",
+      "en" : "Serious Incident"
+    },
+    "comment" : {
+      "en" : "Represents a serious incident category."
+    },
+    "id" : "20",
+    "superClasses" : [ "5" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#ClassIIa",
+    "baseIri" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ClassIIa",
+      "en" : "Class IIa"
+    },
+    "comment" : {
+      "en" : "Represents MDR risk class IIa."
+    },
+    "id" : "54",
+    "superClasses" : [ "55" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#RiskClass",
+    "baseIri" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "RiskClass",
+      "en" : "Risk Class"
+    },
+    "individuals" : [ {
+      "iri" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#RiskClass_III",
+      "baseIri" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2",
+      "comment" : {
+        "en" : "Individual representing regulatory risk class III."
+      },
+      "labels" : {
+        "IRI-based" : "RiskClass_III",
+        "en" : "Risk Class III"
+      }
+    } ],
+    "subClasses" : [ "54", "60", "58", "93" ],
+    "comment" : {
+      "en" : "Represents a regulatory risk class for a device."
+    },
+    "id" : "55",
+    "superClasses" : [ "9" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#RecallAction",
+    "baseIri" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "RecallAction",
+      "en" : "Recall Action"
+    },
+    "comment" : {
+      "en" : "Represents a recall as corrective action."
+    },
+    "id" : "62",
+    "superClasses" : [ "23" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#ClassIII",
+    "baseIri" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ClassIII",
+      "en" : "Class III"
+    },
+    "comment" : {
+      "en" : "Represents the highest MDR risk class."
+    },
+    "id" : "58",
+    "superClasses" : [ "55" ]
+  } ],
+  "property" : [ {
+    "id" : "0",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "3",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "6",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "14",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "19",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "21",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "22",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "24",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "27",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "28",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "29",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "31",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "32",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "34",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "35",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "37",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "38",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "48",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "52",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "53",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "57",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "59",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "64",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "65",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "66",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "67",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "68",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "69",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "71",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "73",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "74",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "76",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "77",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "78",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "79",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "80",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "81",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "82",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "83",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "84",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "86",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "87",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "88",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "89",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "90",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "91",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "94",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "95",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "96",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "97",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "98",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "100",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "101",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "103",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "104",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "105",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "106",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "107",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "108",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "109",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "110",
+    "type" : "owl:datatypeProperty"
+  } ],
+  "propertyAttribute" : [ {
+    "iri" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasAuthorizationNumber",
+    "baseIri" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2",
+    "range" : "2",
+    "label" : {
+      "IRI-based" : "hasAuthorizationNumber",
+      "en" : "has authorization number"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "Stores the authorization number of a manufacturer."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "0"
+  }, {
+    "range" : "5",
+    "domain" : "4",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "3"
+  }, {
+    "iri" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#reportedBy",
+    "baseIri" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2",
+    "range" : "1",
+    "label" : {
+      "IRI-based" : "reportedBy",
+      "en" : "reported by"
+    },
+    "domain" : "7",
+    "comment" : {
+      "en" : "Links an incident to the manufacturer that reported it."
+    },
+    "attributes" : [ "object" ],
+    "id" : "6"
+  }, {
+    "iri" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasCountry",
+    "baseIri" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2",
+    "range" : "15",
+    "label" : {
+      "IRI-based" : "hasCountry",
+      "en" : "has country"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "Stores the country of a manufacturer."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "14"
+  }, {
+    "range" : "5",
+    "domain" : "20",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "19"
+  }, {
+    "range" : "16",
+    "domain" : "18",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "21"
+  }, {
+    "iri" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasCorrectiveAction",
+    "baseIri" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2",
+    "range" : "7",
+    "label" : {
+      "IRI-based" : "hasCorrectiveAction",
+      "en" : "has corrective action"
+    },
+    "domain" : "23",
+    "comment" : {
+      "en" : "Links a corrective action to the incident that motivated it."
+    },
+    "attributes" : [ "object" ],
+    "id" : "22"
+  }, {
+    "range" : "26",
+    "domain" : "25",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "24"
+  }, {
+    "range" : "8",
+    "domain" : "13",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "27"
+  }, {
+    "range" : "16",
+    "domain" : "17",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "28"
+  }, {
+    "range" : "26",
+    "domain" : "30",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "29"
+  }, {
+    "range" : "8",
+    "domain" : "10",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "31"
+  }, {
+    "range" : "25",
+    "domain" : "33",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "32"
+  }, {
+    "range" : "8",
+    "domain" : "12",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "34"
+  }, {
+    "range" : "8",
+    "domain" : "11",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "35"
+  }, {
+    "iri" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#linkedToIncident",
+    "baseIri" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2",
+    "range" : "7",
+    "label" : {
+      "IRI-based" : "linkedToIncident",
+      "en" : "linked to incident"
+    },
+    "domain" : "23",
+    "comment" : {
+      "en" : "Links a corrective action to its related incident."
+    },
+    "attributes" : [ "object" ],
+    "id" : "37"
+  }, {
+    "iri" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#relatedToDevice",
+    "baseIri" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2",
+    "range" : "39",
+    "label" : {
+      "IRI-based" : "relatedToDevice",
+      "en" : "related to device"
+    },
+    "domain" : "7",
+    "comment" : {
+      "en" : "Links an incident to the affected device."
+    },
+    "attributes" : [ "object" ],
+    "id" : "38"
+  }, {
+    "iri" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasSeverity",
+    "baseIri" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2",
+    "range" : "46",
+    "label" : {
+      "IRI-based" : "hasSeverity",
+      "en" : "has severity"
+    },
+    "domain" : "49",
+    "comment" : {
+      "en" : "Stores the severity level of a risk."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "48"
+  }, {
+    "iri" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasOutcome",
+    "baseIri" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2",
+    "range" : "50",
+    "label" : {
+      "IRI-based" : "hasOutcome",
+      "en" : "has outcome"
+    },
+    "domain" : "7",
+    "comment" : {
+      "en" : "Stores the outcome of an incident."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "52"
+  }, {
+    "range" : "55",
+    "domain" : "54",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "53"
+  }, {
+    "range" : "55",
+    "domain" : "58",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "57"
+  }, {
+    "range" : "55",
+    "domain" : "60",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "59"
+  }, {
+    "range" : "23",
+    "domain" : "62",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "64"
+  }, {
+    "iri" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasProbability",
+    "baseIri" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2",
+    "range" : "44",
+    "label" : {
+      "IRI-based" : "hasProbability",
+      "en" : "has probability"
+    },
+    "domain" : "49",
+    "comment" : {
+      "en" : "Stores the probability level of a risk."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "65"
+  }, {
+    "range" : "23",
+    "domain" : "61",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "66"
+  }, {
+    "range" : "23",
+    "domain" : "63",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "67"
+  }, {
+    "range" : "23",
+    "domain" : "36",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "68"
+  }, {
+    "range" : "30",
+    "domain" : "70",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "69"
+  }, {
+    "range" : "49",
+    "domain" : "72",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "71"
+  }, {
+    "range" : "39",
+    "domain" : "56",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "73"
+  }, {
+    "range" : "30",
+    "domain" : "75",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "74"
+  }, {
+    "range" : "9",
+    "domain" : "7",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "76"
+  }, {
+    "range" : "9",
+    "domain" : "16",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "77"
+  }, {
+    "range" : "9",
+    "domain" : "5",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "78"
+  }, {
+    "range" : "9",
+    "domain" : "23",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "79"
+  }, {
+    "range" : "9",
+    "domain" : "55",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "80"
+  }, {
+    "range" : "9",
+    "domain" : "26",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "81"
+  }, {
+    "range" : "9",
+    "domain" : "8",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "82"
+  }, {
+    "range" : "9",
+    "domain" : "1",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "83"
+  }, {
+    "range" : "7",
+    "domain" : "85",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "84"
+  }, {
+    "iri" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasRiskClass",
+    "baseIri" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2",
+    "range" : "55",
+    "label" : {
+      "IRI-based" : "hasRiskClass",
+      "en" : "has risk class"
+    },
+    "domain" : "39",
+    "comment" : {
+      "en" : "Links a device to a regulatory risk class."
+    },
+    "attributes" : [ "object" ],
+    "id" : "86"
+  }, {
+    "range" : "9",
+    "domain" : "39",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "87"
+  }, {
+    "iri" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasReportDate",
+    "baseIri" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2",
+    "range" : "43",
+    "label" : {
+      "IRI-based" : "hasReportDate",
+      "en" : "has report date"
+    },
+    "domain" : "7",
+    "comment" : {
+      "en" : "Stores the report date of an incident."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "88"
+  }, {
+    "range" : "9",
+    "domain" : "49",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "89"
+  }, {
+    "iri" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#relatedToRisk",
+    "baseIri" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2",
+    "range" : "49",
+    "label" : {
+      "IRI-based" : "relatedToRisk",
+      "en" : "related to risk"
+    },
+    "domain" : "7",
+    "comment" : {
+      "en" : "Links an incident to the associated risk."
+    },
+    "attributes" : [ "object" ],
+    "id" : "90"
+  }, {
+    "iri" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasEventDate",
+    "baseIri" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2",
+    "range" : "92",
+    "label" : {
+      "IRI-based" : "hasEventDate",
+      "en" : "has event date"
+    },
+    "domain" : "7",
+    "comment" : {
+      "en" : "Stores the event date of an incident."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "91"
+  }, {
+    "iri" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasDescription",
+    "baseIri" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2",
+    "range" : "42",
+    "label" : {
+      "IRI-based" : "hasDescription",
+      "en" : "has description"
+    },
+    "domain" : "40",
+    "comment" : {
+      "en" : "Stores a textual description."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "94"
+  }, {
+    "iri" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#manufacturesDevice",
+    "baseIri" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2",
+    "range" : "39",
+    "label" : {
+      "IRI-based" : "manufacturesDevice",
+      "en" : "manufactures device"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "Links a manufacturer to a device manufactured by it."
+    },
+    "attributes" : [ "object" ],
+    "id" : "95"
+  }, {
+    "range" : "55",
+    "domain" : "93",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "96"
+  }, {
+    "iri" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasManufacturer",
+    "baseIri" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2",
+    "range" : "1",
+    "label" : {
+      "IRI-based" : "hasManufacturer",
+      "en" : "has manufacturer"
+    },
+    "domain" : "39",
+    "comment" : {
+      "en" : "Links a device to its manufacturer."
+    },
+    "attributes" : [ "object", "someValues" ],
+    "id" : "97"
+  }, {
+    "iri" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasEmail",
+    "baseIri" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2",
+    "range" : "99",
+    "label" : {
+      "IRI-based" : "hasEmail",
+      "en" : "has email"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "Stores the contact email of a manufacturer."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "98"
+  }, {
+    "iri" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#relatedToRisk",
+    "baseIri" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2",
+    "range" : "49",
+    "label" : {
+      "IRI-based" : "relatedToRisk",
+      "en" : "related to risk"
+    },
+    "domain" : "7",
+    "comment" : {
+      "en" : "Links an incident to the associated risk."
+    },
+    "attributes" : [ "object", "someValues" ],
+    "id" : "100"
+  }, {
+    "iri" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#relatedToDevice",
+    "baseIri" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2",
+    "range" : "39",
+    "label" : {
+      "IRI-based" : "relatedToDevice",
+      "en" : "related to device"
+    },
+    "domain" : "7",
+    "comment" : {
+      "en" : "Links an incident to the affected device."
+    },
+    "attributes" : [ "object", "someValues" ],
+    "id" : "101"
+  }, {
+    "iri" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasManufacturer",
+    "baseIri" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2",
+    "range" : "1",
+    "label" : {
+      "IRI-based" : "hasManufacturer",
+      "en" : "has manufacturer"
+    },
+    "domain" : "39",
+    "comment" : {
+      "en" : "Links a device to its manufacturer."
+    },
+    "attributes" : [ "object" ],
+    "id" : "103"
+  }, {
+    "iri" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasUDI",
+    "baseIri" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2",
+    "range" : "41",
+    "label" : {
+      "IRI-based" : "hasUDI",
+      "en" : "has UDI-DI"
+    },
+    "domain" : "39",
+    "comment" : {
+      "en" : "Stores the UDI-DI identifier of a device."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "104"
+  }, {
+    "iri" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasCorrectiveAction",
+    "baseIri" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2",
+    "range" : "7",
+    "label" : {
+      "IRI-based" : "hasCorrectiveAction",
+      "en" : "has corrective action"
+    },
+    "domain" : "23",
+    "comment" : {
+      "en" : "Links a corrective action to the incident that motivated it."
+    },
+    "attributes" : [ "object", "someValues" ],
+    "id" : "105"
+  }, {
+    "iri" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasRiskClass",
+    "baseIri" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2",
+    "range" : "55",
+    "label" : {
+      "IRI-based" : "hasRiskClass",
+      "en" : "has risk class"
+    },
+    "domain" : "39",
+    "comment" : {
+      "en" : "Links a device to a regulatory risk class."
+    },
+    "attributes" : [ "object", "someValues" ],
+    "id" : "106"
+  }, {
+    "iri" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasEudamedReference",
+    "baseIri" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2",
+    "range" : "102",
+    "label" : {
+      "IRI-based" : "hasEudamedReference",
+      "en" : "has EUDAMED reference"
+    },
+    "domain" : "40",
+    "comment" : {
+      "en" : "Stores a EUDAMED reference code."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "107"
+  }, {
+    "iri" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasName",
+    "baseIri" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2",
+    "range" : "51",
+    "label" : {
+      "IRI-based" : "hasName",
+      "en" : "has name"
+    },
+    "domain" : "40",
+    "comment" : {
+      "en" : "Stores the name of an entity."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "108"
+  }, {
+    "iri" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasIntendedPurpose",
+    "baseIri" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2",
+    "range" : "47",
+    "label" : {
+      "IRI-based" : "hasIntendedPurpose",
+      "en" : "has intended purpose"
+    },
+    "domain" : "39",
+    "comment" : {
+      "en" : "Stores the intended purpose of a device."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "109"
+  }, {
+    "iri" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasStatus",
+    "baseIri" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2",
+    "range" : "45",
+    "label" : {
+      "IRI-based" : "hasStatus",
+      "en" : "has status"
+    },
+    "domain" : "23",
+    "comment" : {
+      "en" : "Stores the status of a corrective action."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "110"
+  } ]
+}

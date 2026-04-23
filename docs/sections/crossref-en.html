@@ -1057,12 +1057,6 @@ This section provides details for each class and property defined by Medical dev
     <dd>
      <a href="http://www.w3.org/2002/07/owl#Thing" target="_blank" title="http://www.w3.org/2002/07/owl#Thing">Thing</a> <sup class="type-c" title="class">c</sup>
     </dd>
-    <dt>
-     has range
-    </dt>
-    <dd>
-     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
-    </dd>
    </dl>
   </div>
  </div>
@@ -1662,19 +1656,19 @@ This section provides details for each class and property defined by Medical dev
 </div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="swrlrules">
  <h3 id="swrlrules" class="list">SWRL rules</h3>
  <ul class="hlist">
-  <li><a href="#d4e1255">Rule 1 - Class III devices are high risk devices</a></li>
-  <li><a href="#d4e1176">Rule 2 - Manufacturers manufacture their devices</a></li>
-  <li><a href="#d4e1332">Rule 3 - Critical risks generate high priority incidents</a></li>
+  <li><a href="#d4e1174">Rule 1 - Class III devices are high risk devices</a></li>
+  <li><a href="#d4e1348">Rule 2 - Manufacturers manufacture their devices</a></li>
+  <li><a href="#d4e1251">Rule 3 - Critical risks generate high priority incidents</a></li>
  </ul>
- <div class="entity" id="d4e1255">
+ <div class="entity" id="d4e1174">
   <h3>Rule 1 - Class III devices are high risk devices<span class="backlink">back to <a href="#toc">ToC</a> or <a href="#swrlrules">SWRL ToC</a> </span></h3>
-  <p>If a device has risk class III, then it is inferred as a high risk device.<br><br><a href="#hasRiskClass" title="http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasRiskClass">has risk class</a> <sup class="type-op" title="object property">op</sup>(?d,?RiskClass_III) , <a href="#Device" title="http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Device">Device1</a> <sup class="type-c" title="class">c</sup>(?d) -&gt; <a href="#HighRiskDevice" title="http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#HighRiskDevice">High Risk Device</a> <sup class="type-c" title="class">c</sup>(?d)</p>
+  <p>If a device has risk class III, then it is inferred as a high risk device.<br><br><a href="#Device" title="http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Device">Device1</a> <sup class="type-c" title="class">c</sup>(?d) , <a href="#hasRiskClass" title="http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasRiskClass">has risk class</a> <sup class="type-op" title="object property">op</sup>(?d,?RiskClass_III) -&gt; <a href="#HighRiskDevice" title="http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#HighRiskDevice">High Risk Device</a> <sup class="type-c" title="class">c</sup>(?d)</p>
  </div>
- <div class="entity" id="d4e1176">
+ <div class="entity" id="d4e1348">
   <h3>Rule 2 - Manufacturers manufacture their devices<span class="backlink">back to <a href="#toc">ToC</a> or <a href="#swrlrules">SWRL ToC</a> </span></h3>
-  <p>If a device has a manufacturer, the inverse manufacturing relation can be inferred.<br><br><a href="#hasManufacturer" title="http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasManufacturer">has manufacturer</a> <sup class="type-op" title="object property">op</sup>(?d,?m) , <a href="#Device" title="http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Device">Device1</a> <sup class="type-c" title="class">c</sup>(?d) -&gt; <a href="#manufacturesDevice" title="http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#manufacturesDevice">manufactures device</a> <sup class="type-op" title="object property">op</sup>(?m,?d)</p>
+  <p>If a device has a manufacturer, the inverse manufacturing relation can be inferred.<br><br><a href="#Device" title="http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Device">Device1</a> <sup class="type-c" title="class">c</sup>(?d) , <a href="#hasManufacturer" title="http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasManufacturer">has manufacturer</a> <sup class="type-op" title="object property">op</sup>(?d,?m) -&gt; <a href="#manufacturesDevice" title="http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#manufacturesDevice">manufactures device</a> <sup class="type-op" title="object property">op</sup>(?m,?d)</p>
  </div>
- <div class="entity" id="d4e1332">
+ <div class="entity" id="d4e1251">
   <h3>Rule 3 - Critical risks generate high priority incidents<span class="backlink">back to <a href="#toc">ToC</a> or <a href="#swrlrules">SWRL ToC</a> </span></h3>
   <p>If an incident is related to a critical risk, it is inferred as a high priority incident.<br><br><a href="#Incident" title="http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Incident">Incident</a> <sup class="type-c" title="class">c</sup>(?i) , <a href="#relatedToRisk" title="http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#relatedToRisk">related to risk</a> <sup class="type-op" title="object property">op</sup>(?i,?r) , <a href="#CriticalRisk" title="http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#CriticalRisk">Critical Risk</a> <sup class="type-c" title="class">c</sup>(?r) -&gt; <a href="#HighPriorityIncident" title="http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#HighPriorityIncident">High Priority Incident</a> <sup class="type-c" title="class">c</sup>(?i)</p>
  </div>

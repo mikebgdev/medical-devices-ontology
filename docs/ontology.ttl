@@ -109,7 +109,6 @@ xsd:date rdf:type rdfs:Datatype .
 ###  http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasDescription
 :hasDescription rdf:type owl:DatatypeProperty ;
                 rdfs:domain owl:Thing ;
-                rdfs:range xsd:string ;
                 rdfs:comment "Stores a textual description."@en ;
                 rdfs:label "has description"@en .
 
@@ -618,54 +617,27 @@ xsd:date rdf:type rdfs:Datatype .
 #    Rules
 #################################################################
 
-:i rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
-
-:r rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
-
 :d rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
 
 :m rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
 
-[ rdfs:comment "If a device has a manufacturer, the inverse manufacturing relation can be inferred."@en ;
-   rdfs:label "Rule 2 - Manufacturers manufacture their devices"@en ;
-   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
-   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
-                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
-                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> :hasManufacturer ;
-                                                       <http://www.w3.org/2003/11/swrl#argument1> :d ;
-                                                       <http://www.w3.org/2003/11/swrl#argument2> :m
-                                                     ] ;
-                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
-                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
-                                                                  <http://www.w3.org/2003/11/swrl#classPredicate> :Device ;
-                                                                  <http://www.w3.org/2003/11/swrl#argument1> :d
-                                                                ] ;
-                                                      rdf:rest rdf:nil
-                                                    ]
-                                         ] ;
-   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
-                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
-                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> :manufacturesDevice ;
-                                                       <http://www.w3.org/2003/11/swrl#argument1> :m ;
-                                                       <http://www.w3.org/2003/11/swrl#argument2> :d
-                                                     ] ;
-                                           rdf:rest rdf:nil
-                                         ]
- ] .
+:i rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+:r rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
 
 [ rdfs:comment "If a device has risk class III, then it is inferred as a high risk device."@en ;
    rdfs:label "Rule 1 - Class III devices are high risk devices"@en ;
    rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
    <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
-                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
-                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> :hasRiskClass ;
-                                                       <http://www.w3.org/2003/11/swrl#argument1> :d ;
-                                                       <http://www.w3.org/2003/11/swrl#argument2> :RiskClass_III
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :Device ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :d
                                                      ] ;
                                            rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
-                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
-                                                                  <http://www.w3.org/2003/11/swrl#classPredicate> :Device ;
-                                                                  <http://www.w3.org/2003/11/swrl#argument1> :d
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> :hasRiskClass ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> :d ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> :RiskClass_III
                                                                 ] ;
                                                       rdf:rest rdf:nil
                                                     ]
@@ -706,6 +678,33 @@ xsd:date rdf:type rdfs:Datatype .
                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
                                                        <http://www.w3.org/2003/11/swrl#classPredicate> :HighPriorityIncident ;
                                                        <http://www.w3.org/2003/11/swrl#argument1> :i
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+[ rdfs:comment "If a device has a manufacturer, the inverse manufacturing relation can be inferred."@en ;
+   rdfs:label "Rule 2 - Manufacturers manufacture their devices"@en ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :Device ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :d
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> :hasManufacturer ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> :d ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> :m
+                                                                ] ;
+                                                      rdf:rest rdf:nil
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> :manufacturesDevice ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :m ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> :d
                                                      ] ;
                                            rdf:rest rdf:nil
                                          ]
