@@ -1,0 +1,654 @@
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2> <http://www.w3.org/2000/01/rdf-schema#comment> "OWL-DL ontology for high-risk medical devices and in vitro diagnostics based on the CSV files provided in the assignment."@en .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2> <http://www.w3.org/2000/01/rdf-schema#label> "Medical devices ontology for Exercise 2"@en .
+# 
+# 
+# #################################################################
+# #
+# #    Datatypes
+# #
+# #################################################################
+# 
+# 
+# http://www.w3.org/2001/XMLSchema#date
+<http://www.w3.org/2001/XMLSchema#date> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasCorrectiveAction
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasCorrectiveAction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasCorrectiveAction> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#CorrectiveAction> .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasCorrectiveAction> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Incident> .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasCorrectiveAction> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a corrective action to the incident that motivated it."@en .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasCorrectiveAction> <http://www.w3.org/2000/01/rdf-schema#label> "has corrective action"@en .
+# 
+# http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasManufacturer
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasManufacturer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasManufacturer> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Device> .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasManufacturer> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Manufacturer> .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasManufacturer> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a device to its manufacturer."@en .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasManufacturer> <http://www.w3.org/2000/01/rdf-schema#label> "has manufacturer"@en .
+# 
+# http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasRiskClass
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasRiskClass> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasRiskClass> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Device> .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasRiskClass> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#RiskClass> .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasRiskClass> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a device to a regulatory risk class."@en .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasRiskClass> <http://www.w3.org/2000/01/rdf-schema#label> "has risk class"@en .
+# 
+# http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#linkedToIncident
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#linkedToIncident> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#linkedToIncident> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#CorrectiveAction> .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#linkedToIncident> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Incident> .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#linkedToIncident> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a corrective action to its related incident."@en .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#linkedToIncident> <http://www.w3.org/2000/01/rdf-schema#label> "linked to incident"@en .
+# 
+# http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#manufacturesDevice
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#manufacturesDevice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#manufacturesDevice> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Manufacturer> .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#manufacturesDevice> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Device> .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#manufacturesDevice> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a manufacturer to a device manufactured by it."@en .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#manufacturesDevice> <http://www.w3.org/2000/01/rdf-schema#label> "manufactures device"@en .
+# 
+# http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#relatedToDevice
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#relatedToDevice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#relatedToDevice> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Incident> .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#relatedToDevice> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Device> .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#relatedToDevice> <http://www.w3.org/2000/01/rdf-schema#comment> "Links an incident to the affected device."@en .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#relatedToDevice> <http://www.w3.org/2000/01/rdf-schema#label> "related to device"@en .
+# 
+# http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#relatedToRisk
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#relatedToRisk> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#relatedToRisk> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Incident> .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#relatedToRisk> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Risk> .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#relatedToRisk> <http://www.w3.org/2000/01/rdf-schema#comment> "Links an incident to the associated risk."@en .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#relatedToRisk> <http://www.w3.org/2000/01/rdf-schema#label> "related to risk"@en .
+# 
+# http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#reportedBy
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#reportedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#reportedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Incident> .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#reportedBy> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Manufacturer> .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#reportedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "Links an incident to the manufacturer that reported it."@en .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#reportedBy> <http://www.w3.org/2000/01/rdf-schema#label> "reported by"@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasAuthorizationNumber
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasAuthorizationNumber> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasAuthorizationNumber> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Manufacturer> .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasAuthorizationNumber> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasAuthorizationNumber> <http://www.w3.org/2000/01/rdf-schema#comment> "Stores the authorization number of a manufacturer."@en .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasAuthorizationNumber> <http://www.w3.org/2000/01/rdf-schema#label> "has authorization number"@en .
+# 
+# http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasCountry
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasCountry> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasCountry> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Manufacturer> .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasCountry> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasCountry> <http://www.w3.org/2000/01/rdf-schema#comment> "Stores the country of a manufacturer."@en .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasCountry> <http://www.w3.org/2000/01/rdf-schema#label> "has country"@en .
+# 
+# http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasDescription
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasDescription> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasDescription> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2002/07/owl#Thing> .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasDescription> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasDescription> <http://www.w3.org/2000/01/rdf-schema#comment> "Stores a textual description."@en .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasDescription> <http://www.w3.org/2000/01/rdf-schema#label> "has description"@en .
+# 
+# http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasEmail
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasEmail> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasEmail> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Manufacturer> .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasEmail> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasEmail> <http://www.w3.org/2000/01/rdf-schema#comment> "Stores the contact email of a manufacturer."@en .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasEmail> <http://www.w3.org/2000/01/rdf-schema#label> "has email"@en .
+# 
+# http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasEudamedReference
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasEudamedReference> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasEudamedReference> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2002/07/owl#Thing> .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasEudamedReference> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasEudamedReference> <http://www.w3.org/2000/01/rdf-schema#comment> "Stores a EUDAMED reference code."@en .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasEudamedReference> <http://www.w3.org/2000/01/rdf-schema#label> "has EUDAMED reference"@en .
+# 
+# http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasEventDate
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasEventDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasEventDate> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Incident> .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasEventDate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#date> .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasEventDate> <http://www.w3.org/2000/01/rdf-schema#comment> "Stores the event date of an incident."@en .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasEventDate> <http://www.w3.org/2000/01/rdf-schema#label> "has event date"@en .
+# 
+# http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasIntendedPurpose
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasIntendedPurpose> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasIntendedPurpose> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Device> .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasIntendedPurpose> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasIntendedPurpose> <http://www.w3.org/2000/01/rdf-schema#comment> "Stores the intended purpose of a device."@en .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasIntendedPurpose> <http://www.w3.org/2000/01/rdf-schema#label> "has intended purpose"@en .
+# 
+# http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasName
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasName> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2002/07/owl#Thing> .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasName> <http://www.w3.org/2000/01/rdf-schema#comment> "Stores the name of an entity."@en .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasName> <http://www.w3.org/2000/01/rdf-schema#label> "has name"@en .
+# 
+# http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasOutcome
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasOutcome> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasOutcome> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Incident> .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasOutcome> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasOutcome> <http://www.w3.org/2000/01/rdf-schema#comment> "Stores the outcome of an incident."@en .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasOutcome> <http://www.w3.org/2000/01/rdf-schema#label> "has outcome"@en .
+# 
+# http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasProbability
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasProbability> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasProbability> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Risk> .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasProbability> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasProbability> <http://www.w3.org/2000/01/rdf-schema#comment> "Stores the probability level of a risk."@en .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasProbability> <http://www.w3.org/2000/01/rdf-schema#label> "has probability"@en .
+# 
+# http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasReportDate
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasReportDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasReportDate> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Incident> .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasReportDate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#date> .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasReportDate> <http://www.w3.org/2000/01/rdf-schema#comment> "Stores the report date of an incident."@en .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasReportDate> <http://www.w3.org/2000/01/rdf-schema#label> "has report date"@en .
+# 
+# http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasSeverity
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasSeverity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasSeverity> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Risk> .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasSeverity> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasSeverity> <http://www.w3.org/2000/01/rdf-schema#comment> "Stores the severity level of a risk."@en .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasSeverity> <http://www.w3.org/2000/01/rdf-schema#label> "has severity"@en .
+# 
+# http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasStatus
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasStatus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasStatus> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#CorrectiveAction> .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasStatus> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasStatus> <http://www.w3.org/2000/01/rdf-schema#comment> "Stores the status of a corrective action."@en .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasStatus> <http://www.w3.org/2000/01/rdf-schema#label> "has status"@en .
+# 
+# http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasUDI
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasUDI> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasUDI> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Device> .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasUDI> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasUDI> <http://www.w3.org/2000/01/rdf-schema#comment> "Stores the UDI-DI identifier of a device."@en .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasUDI> <http://www.w3.org/2000/01/rdf-schema#label> "has UDI-DI"@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#ActiveDevice
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#ActiveDevice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#ActiveDevice> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#DeviceType> .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#ActiveDevice> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents a device that depends on an energy source."@en .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#ActiveDevice> <http://www.w3.org/2000/01/rdf-schema#label> "Active Device"@en .
+# 
+# http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#ClassI
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#ClassI> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#ClassI> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#RiskClass> .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#ClassI> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents the lowest MDR risk class."@en .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#ClassI> <http://www.w3.org/2000/01/rdf-schema#label> "Class I"@en .
+# 
+# http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#ClassIII
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#ClassIII> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#ClassIII> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#RiskClass> .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#ClassIII> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents the highest MDR risk class."@en .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#ClassIII> <http://www.w3.org/2000/01/rdf-schema#label> "Class III"@en .
+# 
+# http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#ClassIIa
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#ClassIIa> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#ClassIIa> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#RiskClass> .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#ClassIIa> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents MDR risk class IIa."@en .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#ClassIIa> <http://www.w3.org/2000/01/rdf-schema#label> "Class IIa"@en .
+# 
+# http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#ClassIIb
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#ClassIIb> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#ClassIIb> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#RiskClass> .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#ClassIIb> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents MDR risk class IIb."@en .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#ClassIIb> <http://www.w3.org/2000/01/rdf-schema#label> "Class IIb"@en .
+# 
+# http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#ClinicalRisk
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#ClinicalRisk> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#ClinicalRisk> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#RiskType> .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#ClinicalRisk> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents a clinical risk category."@en .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#ClinicalRisk> <http://www.w3.org/2000/01/rdf-schema#label> "Clinical Risk"@en .
+# 
+# http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#CorrectiveAction
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#CorrectiveAction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#CorrectiveAction> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#MedicalEntity> .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#CorrectiveAction> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid1 .
+_:genid1 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Incident> .
+_:genid1 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasCorrectiveAction> .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#CorrectiveAction> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents a field safety corrective action linked to an incident."@en .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#CorrectiveAction> <http://www.w3.org/2000/01/rdf-schema#label> "Corrective Action"@en .
+# 
+# http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#CriticalRisk
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#CriticalRisk> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#CriticalRisk> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Risk> .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#CriticalRisk> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents a risk with critical severity."@en .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#CriticalRisk> <http://www.w3.org/2000/01/rdf-schema#label> "Critical Risk"@en .
+# 
+# http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Device
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Device> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Device> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#MedicalEntity> .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Device> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid2 .
+_:genid2 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Manufacturer> .
+_:genid2 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasManufacturer> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Device> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid3 .
+_:genid3 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#RiskClass> .
+_:genid3 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasRiskClass> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+# 
+# http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#DeviceType
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#DeviceType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#DeviceType> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#MedicalEntity> .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#DeviceType> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents a category of medical device."@en .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#DeviceType> <http://www.w3.org/2000/01/rdf-schema#label> "Device Type"@en .
+# 
+# http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#HighPriorityIncident
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#HighPriorityIncident> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#HighPriorityIncident> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Incident> .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#HighPriorityIncident> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents an incident inferred as high priority."@en .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#HighPriorityIncident> <http://www.w3.org/2000/01/rdf-schema#label> "High Priority Incident"@en .
+# 
+# http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#HighRiskDevice
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#HighRiskDevice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#HighRiskDevice> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Device> .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#HighRiskDevice> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents a device inferred as high risk."@en .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#HighRiskDevice> <http://www.w3.org/2000/01/rdf-schema#label> "High Risk Device"@en .
+# 
+# http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#IVDDevice
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#IVDDevice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#IVDDevice> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#DeviceType> .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#IVDDevice> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents an in vitro diagnostic device."@en .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#IVDDevice> <http://www.w3.org/2000/01/rdf-schema#label> "IVD Device"@en .
+# 
+# http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#IVDRFramework
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#IVDRFramework> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#IVDRFramework> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#RegulatoryFramework> .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#IVDRFramework> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents the IVDR (EU 2017/746) regulatory framework."@en .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#IVDRFramework> <http://www.w3.org/2000/01/rdf-schema#label> "IVDR Framework"@en .
+# 
+# http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#ImplantableDevice
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#ImplantableDevice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#ImplantableDevice> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#DeviceType> .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#ImplantableDevice> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents a device intended to be implanted."@en .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#ImplantableDevice> <http://www.w3.org/2000/01/rdf-schema#label> "Implantable Device"@en .
+# 
+# http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#InSituCorrectionAction
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#InSituCorrectionAction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#InSituCorrectionAction> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#CorrectiveAction> .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#InSituCorrectionAction> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents an in-situ correction as corrective action."@en .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#InSituCorrectionAction> <http://www.w3.org/2000/01/rdf-schema#label> "In Situ Correction Action"@en .
+# 
+# http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Incident
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Incident> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Incident> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#MedicalEntity> .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Incident> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid4 .
+_:genid4 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Device> .
+_:genid4 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#relatedToDevice> .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Incident> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid5 .
+_:genid5 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Risk> .
+_:genid5 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#relatedToRisk> .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Incident> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents an incident notified for a specific medical device."@en .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Incident> <http://www.w3.org/2000/01/rdf-schema#label> "Incident"@en .
+# 
+# http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#IncidentType
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#IncidentType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#IncidentType> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#MedicalEntity> .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#IncidentType> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents a category of incident."@en .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#IncidentType> <http://www.w3.org/2000/01/rdf-schema#label> "Incident Type"@en .
+# 
+# http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#InfectionRisk
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#InfectionRisk> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#InfectionRisk> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#ClinicalRisk> .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#InfectionRisk> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents a clinical infection risk."@en .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#InfectionRisk> <http://www.w3.org/2000/01/rdf-schema#label> "Infection Risk"@en .
+# 
+# http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#InjuryRisk
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#InjuryRisk> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#InjuryRisk> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#ClinicalRisk> .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#InjuryRisk> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents a clinical injury risk."@en .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#InjuryRisk> <http://www.w3.org/2000/01/rdf-schema#label> "Injury Risk"@en .
+# 
+# http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#MDRFramework
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#MDRFramework> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#MDRFramework> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#RegulatoryFramework> .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#MDRFramework> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents the MDR (EU 2017/745) regulatory framework."@en .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#MDRFramework> <http://www.w3.org/2000/01/rdf-schema#label> "MDR Framework"@en .
+# 
+# http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#MalfunctionRisk
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#MalfunctionRisk> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#MalfunctionRisk> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#TechnicalRisk> .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#MalfunctionRisk> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents a technical malfunction risk."@en .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#MalfunctionRisk> <http://www.w3.org/2000/01/rdf-schema#label> "Malfunction Risk"@en .
+# 
+# http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Manufacturer
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Manufacturer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Manufacturer> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#MedicalEntity> .
+# 
+# http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#MedicalEntity
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#MedicalEntity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#MedicalEntity> <http://www.w3.org/2000/01/rdf-schema#comment> "Top class for the main entities represented in the ontology."@en .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#MedicalEntity> <http://www.w3.org/2000/01/rdf-schema#label> "Medical Entity"@en .
+# 
+# http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#NonSeriousIncident
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#NonSeriousIncident> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#NonSeriousIncident> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#IncidentType> .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#NonSeriousIncident> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents a non-serious incident category."@en .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#NonSeriousIncident> <http://www.w3.org/2000/01/rdf-schema#label> "Non-Serious Incident"@en .
+# 
+# http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#RecallAction
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#RecallAction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#RecallAction> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#CorrectiveAction> .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#RecallAction> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents a recall as corrective action."@en .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#RecallAction> <http://www.w3.org/2000/01/rdf-schema#label> "Recall Action"@en .
+# 
+# http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#RegulatoryFramework
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#RegulatoryFramework> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#RegulatoryFramework> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#MedicalEntity> .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#RegulatoryFramework> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents the regulatory framework under which a device is classified."@en .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#RegulatoryFramework> <http://www.w3.org/2000/01/rdf-schema#label> "Regulatory Framework"@en .
+# 
+# http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#ReusableDevice
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#ReusableDevice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#ReusableDevice> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#DeviceType> .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#ReusableDevice> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents a device intended for repeated use."@en .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#ReusableDevice> <http://www.w3.org/2000/01/rdf-schema#label> "Reusable Device"@en .
+# 
+# http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Risk
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Risk> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Risk> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#MedicalEntity> .
+# 
+# http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#RiskClass
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#RiskClass> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#RiskClass> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#MedicalEntity> .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#RiskClass> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents a regulatory risk class for a device."@en .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#RiskClass> <http://www.w3.org/2000/01/rdf-schema#label> "Risk Class"@en .
+# 
+# http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#RiskType
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#RiskType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#RiskType> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#MedicalEntity> .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#RiskType> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents a category of risk."@en .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#RiskType> <http://www.w3.org/2000/01/rdf-schema#label> "Risk Type"@en .
+# 
+# http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#SafetyAlertAction
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#SafetyAlertAction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#SafetyAlertAction> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#CorrectiveAction> .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#SafetyAlertAction> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents a safety alert as corrective action."@en .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#SafetyAlertAction> <http://www.w3.org/2000/01/rdf-schema#label> "Safety Alert Action"@en .
+# 
+# http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#SeriousIncident
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#SeriousIncident> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#SeriousIncident> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#IncidentType> .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#SeriousIncident> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents a serious incident category."@en .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#SeriousIncident> <http://www.w3.org/2000/01/rdf-schema#label> "Serious Incident"@en .
+# 
+# http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#TechnicalRisk
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#TechnicalRisk> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#TechnicalRisk> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#RiskType> .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#TechnicalRisk> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents a technical risk category."@en .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#TechnicalRisk> <http://www.w3.org/2000/01/rdf-schema#label> "Technical Risk"@en .
+# 
+# http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#UserNoticeAction
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#UserNoticeAction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#UserNoticeAction> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#CorrectiveAction> .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#UserNoticeAction> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents a user notice as corrective action."@en .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#UserNoticeAction> <http://www.w3.org/2000/01/rdf-schema#label> "User Notice Action"@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Individuals
+# #
+# #################################################################
+# 
+# 
+# http://dbpedia.org/resource/Manufacturer
+<http://dbpedia.org/resource/Manufacturer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://dbpedia.org/resource/Manufacturer> <http://www.w3.org/2002/07/owl#sameAs> <http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Manufacturer> .
+# 
+# http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Manufacturer
+# 
+# http://dbpedia.org/resource/Medical_device
+<http://dbpedia.org/resource/Medical_device> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://dbpedia.org/resource/Medical_device> <http://www.w3.org/2002/07/owl#sameAs> <http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Device> .
+# 
+# http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Device
+# 
+# http://dbpedia.org/resource/Medtronic
+<http://dbpedia.org/resource/Medtronic> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://dbpedia.org/resource/Medtronic> <http://www.w3.org/2002/07/owl#sameAs> <http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Medtronic_plc> .
+# 
+# http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Medtronic_plc
+# 
+# http://dbpedia.org/resource/Risk
+<http://dbpedia.org/resource/Risk> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://dbpedia.org/resource/Risk> <http://www.w3.org/2002/07/owl#sameAs> <http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Risk> .
+# 
+# http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Risk
+# 
+# http://dbpedia.org/resource/Ventricular_assist_device
+<http://dbpedia.org/resource/Ventricular_assist_device> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://dbpedia.org/resource/Ventricular_assist_device> <http://www.w3.org/2002/07/owl#sameAs> <http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#HeartMate3_LVAD> .
+# 
+# http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#HeartMate3_LVAD
+# 
+# http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Device
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Device> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#FSCA_001
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#FSCA_001> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#FSCA_001> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#CorrectiveAction> .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#FSCA_001> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#SafetyAlertAction> .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#FSCA_001> <http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasCorrectiveAction> <http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Incident_INC001> .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#FSCA_001> <http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasDescription> "Safety alert issued to all implanting centres regarding anticoagulation protocol update for HeartMate 3 to reduce thrombosis risk."@en .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#FSCA_001> <http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasEudamedReference> "EU-FSCA-2024-000001" .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#FSCA_001> <http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasStatus> "Open" .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#FSCA_001> <http://www.w3.org/2000/01/rdf-schema#comment> "Corrective action instance created from acciones_correctivas.csv."@en .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#FSCA_001> <http://www.w3.org/2000/01/rdf-schema#label> "FSCA-001"@en .
+# 
+# http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Framework_MDR
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Framework_MDR> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Framework_MDR> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#MDRFramework> .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Framework_MDR> <http://www.w3.org/2000/01/rdf-schema#comment> "Individual representing MDR (EU 2017/745)."@en .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Framework_MDR> <http://www.w3.org/2000/01/rdf-schema#label> "MDR framework"@en .
+# 
+# http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#HeartMate3_LVAD
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#HeartMate3_LVAD> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#HeartMate3_LVAD> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Device> .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#HeartMate3_LVAD> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#HighRiskDevice> .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#HeartMate3_LVAD> <http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasManufacturer> <http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Medtronic_plc> .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#HeartMate3_LVAD> <http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasRiskClass> <http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#RiskClass_III> .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#HeartMate3_LVAD> <http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasDescription> "Device extracted from dispositivos.csv (DEV-001)."@en .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#HeartMate3_LVAD> <http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasEudamedReference> "DEV-001" .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#HeartMate3_LVAD> <http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasIntendedPurpose> "Ventricular assist device for end-stage heart failure" .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#HeartMate3_LVAD> <http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasName> "HeartMate 3 LVAD" .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#HeartMate3_LVAD> <http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasUDI> "(01)00380740009095" .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#HeartMate3_LVAD> <http://www.w3.org/2000/01/rdf-schema#comment> "Device instance created from dispositivos.csv."@en .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#HeartMate3_LVAD> <http://www.w3.org/2000/01/rdf-schema#label> "HeartMate 3 LVAD"@en .
+# 
+# http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Incident_INC001
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Incident_INC001> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Incident_INC001> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#HighPriorityIncident> .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Incident_INC001> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Incident> .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Incident_INC001> <http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#relatedToDevice> <http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#HeartMate3_LVAD> .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Incident_INC001> <http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#relatedToRisk> <http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Thrombosis_DeviceRelated> .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Incident_INC001> <http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#reportedBy> <http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Medtronic_plc> .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Incident_INC001> <http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasDescription> "Patient implanted with HeartMate 3 LVAD developed ischemic stroke six months post-implant. Device thrombus was confirmed by echocardiography."@en .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Incident_INC001> <http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasEudamedReference> "EU-INC-2024-000001" .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Incident_INC001> <http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasEventDate> "2024-01-08"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Incident_INC001> <http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasOutcome> "Serious patient injury - embolic stroke" .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Incident_INC001> <http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasReportDate> "2024-01-15"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Incident_INC001> <http://www.w3.org/2000/01/rdf-schema#comment> "Incident instance created from incidentes.csv."@en .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Incident_INC001> <http://www.w3.org/2000/01/rdf-schema#label> "INC-001"@en .
+# 
+# http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Manufacturer
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Manufacturer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Medtronic_plc
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Medtronic_plc> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Medtronic_plc> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Manufacturer> .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Medtronic_plc> <http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasAuthorizationNumber> "IE/2017/001234" .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Medtronic_plc> <http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasCountry> "Ireland" .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Medtronic_plc> <http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasDescription> "Manufacturer extracted from fabricantes.csv."@en .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Medtronic_plc> <http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasEmail> "regulatory@medtronic.com" .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Medtronic_plc> <http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasEudamedReference> "SRN-IE-MED-0001" .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Medtronic_plc> <http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasName> "Medtronic plc" .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Medtronic_plc> <http://www.w3.org/2000/01/rdf-schema#comment> "Manufacturer instance created from fabricantes.csv."@en .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Medtronic_plc> <http://www.w3.org/2000/01/rdf-schema#label> "Medtronic plc"@en .
+# 
+# http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Risk
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Risk> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#RiskClass_III
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#RiskClass_III> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#RiskClass_III> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#RiskClass> .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#RiskClass_III> <http://www.w3.org/2000/01/rdf-schema#comment> "Individual representing regulatory risk class III."@en .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#RiskClass_III> <http://www.w3.org/2000/01/rdf-schema#label> "Risk Class III"@en .
+# 
+# http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Thrombosis_DeviceRelated
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Thrombosis_DeviceRelated> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Thrombosis_DeviceRelated> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#CriticalRisk> .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Thrombosis_DeviceRelated> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Risk> .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Thrombosis_DeviceRelated> <http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasDescription> "Thrombus formation on device surface causing embolic events."@en .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Thrombosis_DeviceRelated> <http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasEudamedReference> "RSK-003" .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Thrombosis_DeviceRelated> <http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasName> "Thrombosis - device-related" .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Thrombosis_DeviceRelated> <http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasProbability> "Low" .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Thrombosis_DeviceRelated> <http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasSeverity> "Critical" .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Thrombosis_DeviceRelated> <http://www.w3.org/2000/01/rdf-schema#comment> "Risk instance created from riesgos.csv."@en .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Thrombosis_DeviceRelated> <http://www.w3.org/2000/01/rdf-schema#label> "Thrombosis - device-related"@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Annotations
+# #
+# #################################################################
+# 
+# 
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Device> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents a medical device registered in the catalogue."@en .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Device> <http://www.w3.org/2000/01/rdf-schema#label> "Device1"@en .
+# 
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Manufacturer> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents a manufacturer of medical devices."@en .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Manufacturer> <http://www.w3.org/2000/01/rdf-schema#label> "Manufacturer1"@en .
+# 
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Risk> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents a risk identified for a medical device."@en .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Risk> <http://www.w3.org/2000/01/rdf-schema#label> "Risk1"@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Rules
+# #
+# #################################################################
+# 
+# 
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#i> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Variable> .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#r> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Variable> .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#d> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Variable> .
+<http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#m> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Variable> .
+_:genid15 <http://www.w3.org/2000/01/rdf-schema#comment> "If a device has a manufacturer, the inverse manufacturing relation can be inferred."@en .
+_:genid15 <http://www.w3.org/2000/01/rdf-schema#label> "Rule 2 - Manufacturers manufacture their devices"@en .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Imp> .
+_:genid15 <http://www.w3.org/2003/11/swrl#body> _:genid18 .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid16 .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid17 .
+_:genid17 <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#d> .
+_:genid17 <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Device> .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#ClassAtom> .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid19 .
+_:genid19 <http://www.w3.org/2003/11/swrl#argument2> <http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#m> .
+_:genid19 <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#d> .
+_:genid19 <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasManufacturer> .
+_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid15 <http://www.w3.org/2003/11/swrl#head> _:genid20 .
+_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid21 .
+_:genid21 <http://www.w3.org/2003/11/swrl#argument2> <http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#d> .
+_:genid21 <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#m> .
+_:genid21 <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#manufacturesDevice> .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> .
+_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid22 <http://www.w3.org/2000/01/rdf-schema#comment> "If a device has risk class III, then it is inferred as a high risk device."@en .
+_:genid22 <http://www.w3.org/2000/01/rdf-schema#label> "Rule 1 - Class III devices are high risk devices"@en .
+_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Imp> .
+_:genid22 <http://www.w3.org/2003/11/swrl#body> _:genid25 .
+_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid23 .
+_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid24 .
+_:genid24 <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#d> .
+_:genid24 <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Device> .
+_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#ClassAtom> .
+_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid26 .
+_:genid26 <http://www.w3.org/2003/11/swrl#argument2> <http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#RiskClass_III> .
+_:genid26 <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#d> .
+_:genid26 <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasRiskClass> .
+_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> .
+_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid22 <http://www.w3.org/2003/11/swrl#head> _:genid27 .
+_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid28 .
+_:genid28 <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#d> .
+_:genid28 <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#HighRiskDevice> .
+_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#ClassAtom> .
+_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid6 <http://www.w3.org/2000/01/rdf-schema#comment> "If an incident is related to a critical risk, it is inferred as a high priority incident."@en .
+_:genid6 <http://www.w3.org/2000/01/rdf-schema#label> "Rule 3 - Critical risks generate high priority incidents"@en .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Imp> .
+_:genid6 <http://www.w3.org/2003/11/swrl#body> _:genid11 .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid9 .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid7 .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid8 .
+_:genid8 <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#r> .
+_:genid8 <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#CriticalRisk> .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#ClassAtom> .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid10 .
+_:genid10 <http://www.w3.org/2003/11/swrl#argument2> <http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#r> .
+_:genid10 <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#i> .
+_:genid10 <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#relatedToRisk> .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid12 .
+_:genid12 <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#i> .
+_:genid12 <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Incident> .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#ClassAtom> .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid6 <http://www.w3.org/2003/11/swrl#head> _:genid13 .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid14 .
+_:genid14 <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#i> .
+_:genid14 <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#HighPriorityIncident> .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#ClassAtom> .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+# Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

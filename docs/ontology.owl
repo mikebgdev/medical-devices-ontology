@@ -1,0 +1,1166 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#"
+     xml:base="http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+     xmlns:ejercicio2="http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2">
+        <rdfs:comment xml:lang="en">OWL-DL ontology for high-risk medical devices and in vitro diagnostics based on the CSV files provided in the assignment.</rdfs:comment>
+        <rdfs:label xml:lang="en">Medical devices ontology for Exercise 2</rdfs:label>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#date -->
+
+
+    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#date"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasCorrectiveAction -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasCorrectiveAction">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#CorrectiveAction"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Incident"/>
+        <rdfs:comment xml:lang="en">Links a corrective action to the incident that motivated it.</rdfs:comment>
+        <rdfs:label xml:lang="en">has corrective action</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasManufacturer -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasManufacturer">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Device"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Manufacturer"/>
+        <rdfs:comment xml:lang="en">Links a device to its manufacturer.</rdfs:comment>
+        <rdfs:label xml:lang="en">has manufacturer</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasRiskClass -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasRiskClass">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Device"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#RiskClass"/>
+        <rdfs:comment xml:lang="en">Links a device to a regulatory risk class.</rdfs:comment>
+        <rdfs:label xml:lang="en">has risk class</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#linkedToIncident -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#linkedToIncident">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#CorrectiveAction"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Incident"/>
+        <rdfs:comment xml:lang="en">Links a corrective action to its related incident.</rdfs:comment>
+        <rdfs:label xml:lang="en">linked to incident</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#manufacturesDevice -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#manufacturesDevice">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Manufacturer"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Device"/>
+        <rdfs:comment xml:lang="en">Links a manufacturer to a device manufactured by it.</rdfs:comment>
+        <rdfs:label xml:lang="en">manufactures device</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#relatedToDevice -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#relatedToDevice">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Incident"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Device"/>
+        <rdfs:comment xml:lang="en">Links an incident to the affected device.</rdfs:comment>
+        <rdfs:label xml:lang="en">related to device</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#relatedToRisk -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#relatedToRisk">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Incident"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Risk"/>
+        <rdfs:comment xml:lang="en">Links an incident to the associated risk.</rdfs:comment>
+        <rdfs:label xml:lang="en">related to risk</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#reportedBy -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#reportedBy">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Incident"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Manufacturer"/>
+        <rdfs:comment xml:lang="en">Links an incident to the manufacturer that reported it.</rdfs:comment>
+        <rdfs:label xml:lang="en">reported by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasAuthorizationNumber -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasAuthorizationNumber">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Manufacturer"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Stores the authorization number of a manufacturer.</rdfs:comment>
+        <rdfs:label xml:lang="en">has authorization number</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasCountry -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasCountry">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Manufacturer"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Stores the country of a manufacturer.</rdfs:comment>
+        <rdfs:label xml:lang="en">has country</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasDescription -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasDescription">
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Stores a textual description.</rdfs:comment>
+        <rdfs:label xml:lang="en">has description</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasEmail -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasEmail">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Manufacturer"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Stores the contact email of a manufacturer.</rdfs:comment>
+        <rdfs:label xml:lang="en">has email</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasEudamedReference -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasEudamedReference">
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Stores a EUDAMED reference code.</rdfs:comment>
+        <rdfs:label xml:lang="en">has EUDAMED reference</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasEventDate -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasEventDate">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Incident"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+        <rdfs:comment xml:lang="en">Stores the event date of an incident.</rdfs:comment>
+        <rdfs:label xml:lang="en">has event date</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasIntendedPurpose -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasIntendedPurpose">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Device"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Stores the intended purpose of a device.</rdfs:comment>
+        <rdfs:label xml:lang="en">has intended purpose</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasName -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasName">
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Stores the name of an entity.</rdfs:comment>
+        <rdfs:label xml:lang="en">has name</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasOutcome -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasOutcome">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Incident"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Stores the outcome of an incident.</rdfs:comment>
+        <rdfs:label xml:lang="en">has outcome</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasProbability -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasProbability">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Risk"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Stores the probability level of a risk.</rdfs:comment>
+        <rdfs:label xml:lang="en">has probability</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasReportDate -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasReportDate">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Incident"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+        <rdfs:comment xml:lang="en">Stores the report date of an incident.</rdfs:comment>
+        <rdfs:label xml:lang="en">has report date</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasSeverity -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasSeverity">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Risk"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Stores the severity level of a risk.</rdfs:comment>
+        <rdfs:label xml:lang="en">has severity</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasStatus -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasStatus">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#CorrectiveAction"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Stores the status of a corrective action.</rdfs:comment>
+        <rdfs:label xml:lang="en">has status</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasUDI -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasUDI">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Device"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Stores the UDI-DI identifier of a device.</rdfs:comment>
+        <rdfs:label xml:lang="en">has UDI-DI</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#ActiveDevice -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#ActiveDevice">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#DeviceType"/>
+        <rdfs:comment xml:lang="en">Represents a device that depends on an energy source.</rdfs:comment>
+        <rdfs:label xml:lang="en">Active Device</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#ClassI -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#ClassI">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#RiskClass"/>
+        <rdfs:comment xml:lang="en">Represents the lowest MDR risk class.</rdfs:comment>
+        <rdfs:label xml:lang="en">Class I</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#ClassIII -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#ClassIII">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#RiskClass"/>
+        <rdfs:comment xml:lang="en">Represents the highest MDR risk class.</rdfs:comment>
+        <rdfs:label xml:lang="en">Class III</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#ClassIIa -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#ClassIIa">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#RiskClass"/>
+        <rdfs:comment xml:lang="en">Represents MDR risk class IIa.</rdfs:comment>
+        <rdfs:label xml:lang="en">Class IIa</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#ClassIIb -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#ClassIIb">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#RiskClass"/>
+        <rdfs:comment xml:lang="en">Represents MDR risk class IIb.</rdfs:comment>
+        <rdfs:label xml:lang="en">Class IIb</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#ClinicalRisk -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#ClinicalRisk">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#RiskType"/>
+        <rdfs:comment xml:lang="en">Represents a clinical risk category.</rdfs:comment>
+        <rdfs:label xml:lang="en">Clinical Risk</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#CorrectiveAction -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#CorrectiveAction">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#MedicalEntity"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasCorrectiveAction"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Incident"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Represents a field safety corrective action linked to an incident.</rdfs:comment>
+        <rdfs:label xml:lang="en">Corrective Action</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#CriticalRisk -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#CriticalRisk">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Risk"/>
+        <rdfs:comment xml:lang="en">Represents a risk with critical severity.</rdfs:comment>
+        <rdfs:label xml:lang="en">Critical Risk</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Device -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Device">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#MedicalEntity"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasManufacturer"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Manufacturer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasRiskClass"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#RiskClass"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#DeviceType -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#DeviceType">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#MedicalEntity"/>
+        <rdfs:comment xml:lang="en">Represents a category of medical device.</rdfs:comment>
+        <rdfs:label xml:lang="en">Device Type</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#HighPriorityIncident -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#HighPriorityIncident">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Incident"/>
+        <rdfs:comment xml:lang="en">Represents an incident inferred as high priority.</rdfs:comment>
+        <rdfs:label xml:lang="en">High Priority Incident</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#HighRiskDevice -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#HighRiskDevice">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Device"/>
+        <rdfs:comment xml:lang="en">Represents a device inferred as high risk.</rdfs:comment>
+        <rdfs:label xml:lang="en">High Risk Device</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#IVDDevice -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#IVDDevice">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#DeviceType"/>
+        <rdfs:comment xml:lang="en">Represents an in vitro diagnostic device.</rdfs:comment>
+        <rdfs:label xml:lang="en">IVD Device</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#IVDRFramework -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#IVDRFramework">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#RegulatoryFramework"/>
+        <rdfs:comment xml:lang="en">Represents the IVDR (EU 2017/746) regulatory framework.</rdfs:comment>
+        <rdfs:label xml:lang="en">IVDR Framework</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#ImplantableDevice -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#ImplantableDevice">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#DeviceType"/>
+        <rdfs:comment xml:lang="en">Represents a device intended to be implanted.</rdfs:comment>
+        <rdfs:label xml:lang="en">Implantable Device</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#InSituCorrectionAction -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#InSituCorrectionAction">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#CorrectiveAction"/>
+        <rdfs:comment xml:lang="en">Represents an in-situ correction as corrective action.</rdfs:comment>
+        <rdfs:label xml:lang="en">In Situ Correction Action</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Incident -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Incident">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#MedicalEntity"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#relatedToDevice"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Device"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#relatedToRisk"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Risk"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Represents an incident notified for a specific medical device.</rdfs:comment>
+        <rdfs:label xml:lang="en">Incident</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#IncidentType -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#IncidentType">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#MedicalEntity"/>
+        <rdfs:comment xml:lang="en">Represents a category of incident.</rdfs:comment>
+        <rdfs:label xml:lang="en">Incident Type</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#InfectionRisk -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#InfectionRisk">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#ClinicalRisk"/>
+        <rdfs:comment xml:lang="en">Represents a clinical infection risk.</rdfs:comment>
+        <rdfs:label xml:lang="en">Infection Risk</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#InjuryRisk -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#InjuryRisk">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#ClinicalRisk"/>
+        <rdfs:comment xml:lang="en">Represents a clinical injury risk.</rdfs:comment>
+        <rdfs:label xml:lang="en">Injury Risk</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#MDRFramework -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#MDRFramework">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#RegulatoryFramework"/>
+        <rdfs:comment xml:lang="en">Represents the MDR (EU 2017/745) regulatory framework.</rdfs:comment>
+        <rdfs:label xml:lang="en">MDR Framework</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#MalfunctionRisk -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#MalfunctionRisk">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#TechnicalRisk"/>
+        <rdfs:comment xml:lang="en">Represents a technical malfunction risk.</rdfs:comment>
+        <rdfs:label xml:lang="en">Malfunction Risk</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Manufacturer -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Manufacturer">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#MedicalEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#MedicalEntity -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#MedicalEntity">
+        <rdfs:comment xml:lang="en">Top class for the main entities represented in the ontology.</rdfs:comment>
+        <rdfs:label xml:lang="en">Medical Entity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#NonSeriousIncident -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#NonSeriousIncident">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#IncidentType"/>
+        <rdfs:comment xml:lang="en">Represents a non-serious incident category.</rdfs:comment>
+        <rdfs:label xml:lang="en">Non-Serious Incident</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#RecallAction -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#RecallAction">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#CorrectiveAction"/>
+        <rdfs:comment xml:lang="en">Represents a recall as corrective action.</rdfs:comment>
+        <rdfs:label xml:lang="en">Recall Action</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#RegulatoryFramework -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#RegulatoryFramework">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#MedicalEntity"/>
+        <rdfs:comment xml:lang="en">Represents the regulatory framework under which a device is classified.</rdfs:comment>
+        <rdfs:label xml:lang="en">Regulatory Framework</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#ReusableDevice -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#ReusableDevice">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#DeviceType"/>
+        <rdfs:comment xml:lang="en">Represents a device intended for repeated use.</rdfs:comment>
+        <rdfs:label xml:lang="en">Reusable Device</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Risk -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Risk">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#MedicalEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#RiskClass -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#RiskClass">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#MedicalEntity"/>
+        <rdfs:comment xml:lang="en">Represents a regulatory risk class for a device.</rdfs:comment>
+        <rdfs:label xml:lang="en">Risk Class</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#RiskType -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#RiskType">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#MedicalEntity"/>
+        <rdfs:comment xml:lang="en">Represents a category of risk.</rdfs:comment>
+        <rdfs:label xml:lang="en">Risk Type</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#SafetyAlertAction -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#SafetyAlertAction">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#CorrectiveAction"/>
+        <rdfs:comment xml:lang="en">Represents a safety alert as corrective action.</rdfs:comment>
+        <rdfs:label xml:lang="en">Safety Alert Action</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#SeriousIncident -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#SeriousIncident">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#IncidentType"/>
+        <rdfs:comment xml:lang="en">Represents a serious incident category.</rdfs:comment>
+        <rdfs:label xml:lang="en">Serious Incident</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#TechnicalRisk -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#TechnicalRisk">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#RiskType"/>
+        <rdfs:comment xml:lang="en">Represents a technical risk category.</rdfs:comment>
+        <rdfs:label xml:lang="en">Technical Risk</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#UserNoticeAction -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#UserNoticeAction">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#CorrectiveAction"/>
+        <rdfs:comment xml:lang="en">Represents a user notice as corrective action.</rdfs:comment>
+        <rdfs:label xml:lang="en">User Notice Action</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://dbpedia.org/resource/Manufacturer -->
+
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Manufacturer">
+        <owl:sameAs rdf:resource="http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Manufacturer"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Manufacturer -->
+
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Manufacturer"/>
+    
+
+
+    <!-- http://dbpedia.org/resource/Medical_device -->
+
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Medical_device">
+        <owl:sameAs rdf:resource="http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Device"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Device -->
+
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Device"/>
+    
+
+
+    <!-- http://dbpedia.org/resource/Medtronic -->
+
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Medtronic">
+        <owl:sameAs rdf:resource="http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Medtronic_plc"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Medtronic_plc -->
+
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Medtronic_plc"/>
+    
+
+
+    <!-- http://dbpedia.org/resource/Risk -->
+
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Risk">
+        <owl:sameAs rdf:resource="http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Risk"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Risk -->
+
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Risk"/>
+    
+
+
+    <!-- http://dbpedia.org/resource/Ventricular_assist_device -->
+
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Ventricular_assist_device">
+        <owl:sameAs rdf:resource="http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#HeartMate3_LVAD"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#HeartMate3_LVAD -->
+
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#HeartMate3_LVAD"/>
+    
+
+
+    <!-- http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Device -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Device"/>
+    
+
+
+    <!-- http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#FSCA_001 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#FSCA_001">
+        <rdf:type rdf:resource="http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#CorrectiveAction"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#SafetyAlertAction"/>
+        <hasCorrectiveAction rdf:resource="http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Incident_INC001"/>
+        <hasDescription xml:lang="en">Safety alert issued to all implanting centres regarding anticoagulation protocol update for HeartMate 3 to reduce thrombosis risk.</hasDescription>
+        <hasEudamedReference>EU-FSCA-2024-000001</hasEudamedReference>
+        <hasStatus>Open</hasStatus>
+        <rdfs:comment xml:lang="en">Corrective action instance created from acciones_correctivas.csv.</rdfs:comment>
+        <rdfs:label xml:lang="en">FSCA-001</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Framework_MDR -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Framework_MDR">
+        <rdf:type rdf:resource="http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#MDRFramework"/>
+        <rdfs:comment xml:lang="en">Individual representing MDR (EU 2017/745).</rdfs:comment>
+        <rdfs:label xml:lang="en">MDR framework</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#HeartMate3_LVAD -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#HeartMate3_LVAD">
+        <rdf:type rdf:resource="http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Device"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#HighRiskDevice"/>
+        <hasManufacturer rdf:resource="http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Medtronic_plc"/>
+        <hasRiskClass rdf:resource="http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#RiskClass_III"/>
+        <hasDescription xml:lang="en">Device extracted from dispositivos.csv (DEV-001).</hasDescription>
+        <hasEudamedReference>DEV-001</hasEudamedReference>
+        <hasIntendedPurpose>Ventricular assist device for end-stage heart failure</hasIntendedPurpose>
+        <hasName>HeartMate 3 LVAD</hasName>
+        <hasUDI>(01)00380740009095</hasUDI>
+        <rdfs:comment xml:lang="en">Device instance created from dispositivos.csv.</rdfs:comment>
+        <rdfs:label xml:lang="en">HeartMate 3 LVAD</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Incident_INC001 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Incident_INC001">
+        <rdf:type rdf:resource="http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#HighPriorityIncident"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Incident"/>
+        <relatedToDevice rdf:resource="http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#HeartMate3_LVAD"/>
+        <relatedToRisk rdf:resource="http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Thrombosis_DeviceRelated"/>
+        <reportedBy rdf:resource="http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Medtronic_plc"/>
+        <hasDescription xml:lang="en">Patient implanted with HeartMate 3 LVAD developed ischemic stroke six months post-implant. Device thrombus was confirmed by echocardiography.</hasDescription>
+        <hasEudamedReference>EU-INC-2024-000001</hasEudamedReference>
+        <hasEventDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-01-08</hasEventDate>
+        <hasOutcome>Serious patient injury - embolic stroke</hasOutcome>
+        <hasReportDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-01-15</hasReportDate>
+        <rdfs:comment xml:lang="en">Incident instance created from incidentes.csv.</rdfs:comment>
+        <rdfs:label xml:lang="en">INC-001</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Manufacturer -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Manufacturer"/>
+    
+
+
+    <!-- http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Medtronic_plc -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Medtronic_plc">
+        <rdf:type rdf:resource="http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Manufacturer"/>
+        <hasAuthorizationNumber>IE/2017/001234</hasAuthorizationNumber>
+        <hasCountry>Ireland</hasCountry>
+        <hasDescription xml:lang="en">Manufacturer extracted from fabricantes.csv.</hasDescription>
+        <hasEmail>regulatory@medtronic.com</hasEmail>
+        <hasEudamedReference>SRN-IE-MED-0001</hasEudamedReference>
+        <hasName>Medtronic plc</hasName>
+        <rdfs:comment xml:lang="en">Manufacturer instance created from fabricantes.csv.</rdfs:comment>
+        <rdfs:label xml:lang="en">Medtronic plc</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Risk -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Risk"/>
+    
+
+
+    <!-- http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#RiskClass_III -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#RiskClass_III">
+        <rdf:type rdf:resource="http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#RiskClass"/>
+        <rdfs:comment xml:lang="en">Individual representing regulatory risk class III.</rdfs:comment>
+        <rdfs:label xml:lang="en">Risk Class III</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Thrombosis_DeviceRelated -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Thrombosis_DeviceRelated">
+        <rdf:type rdf:resource="http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#CriticalRisk"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Risk"/>
+        <hasDescription xml:lang="en">Thrombus formation on device surface causing embolic events.</hasDescription>
+        <hasEudamedReference>RSK-003</hasEudamedReference>
+        <hasName>Thrombosis - device-related</hasName>
+        <hasProbability>Low</hasProbability>
+        <hasSeverity>Critical</hasSeverity>
+        <rdfs:comment xml:lang="en">Risk instance created from riesgos.csv.</rdfs:comment>
+        <rdfs:label xml:lang="en">Thrombosis - device-related</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Device">
+        <rdfs:comment xml:lang="en">Represents a medical device registered in the catalogue.</rdfs:comment>
+        <rdfs:label xml:lang="en">Device1</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Manufacturer">
+        <rdfs:comment xml:lang="en">Represents a manufacturer of medical devices.</rdfs:comment>
+        <rdfs:label xml:lang="en">Manufacturer1</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Risk">
+        <rdfs:comment xml:lang="en">Represents a risk identified for a medical device.</rdfs:comment>
+        <rdfs:label xml:lang="en">Risk1</rdfs:label>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Rules
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#i">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#r">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#d">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#m">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:comment xml:lang="en">If a device has a manufacturer, the inverse manufacturing relation can be inferred.</rdfs:comment>
+        <rdfs:label xml:lang="en">Rule 2 - Manufacturers manufacture their devices</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasManufacturer"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#d"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#m"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Device"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#d"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#manufacturesDevice"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#m"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#d"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:comment xml:lang="en">If a device has risk class III, then it is inferred as a high risk device.</rdfs:comment>
+        <rdfs:label xml:lang="en">Rule 1 - Class III devices are high risk devices</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasRiskClass"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#d"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#RiskClass_III"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Device"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#d"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#HighRiskDevice"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#d"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:comment xml:lang="en">If an incident is related to a critical risk, it is inferred as a high priority incident.</rdfs:comment>
+        <rdfs:label xml:lang="en">Rule 3 - Critical risks generate high priority incidents</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Incident"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#i"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#relatedToRisk"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#i"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#r"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#CriticalRisk"/>
+                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#r"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#HighPriorityIncident"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#i"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/ -->
+
+
