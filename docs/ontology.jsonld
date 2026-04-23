@@ -9,16 +9,20 @@
   } ]
 }, {
   "@id" : "_:genid10",
-  "@type" : [ "http://www.w3.org/2003/11/swrl#ClassAtom" ],
-  "http://www.w3.org/2003/11/swrl#argument1" : [ {
-    "@id" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#d"
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#first" : [ {
+    "@id" : "_:genid11"
   } ],
-  "http://www.w3.org/2003/11/swrl#classPredicate" : [ {
-    "@id" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Device"
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest" : [ {
+    "@list" : [ ]
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2003/11/swrl#AtomList"
   } ]
 }, {
-  "@id" : "_:genid12",
-  "@type" : [ "http://www.w3.org/2003/11/swrl#IndividualPropertyAtom" ],
+  "@id" : "_:genid11",
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"
+  } ],
   "http://www.w3.org/2003/11/swrl#argument1" : [ {
     "@id" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#m"
   } ],
@@ -29,31 +33,40 @@
     "@id" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#manufacturesDevice"
   } ]
 }, {
-  "@id" : "_:genid13",
-  "@type" : [ "http://www.w3.org/2003/11/swrl#Imp" ],
+  "@id" : "_:genid12",
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2003/11/swrl#Imp"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "If a device has risk class III, then it is inferred as a high risk device."
+    "@value" : "If a device has risk class III, it is inferred as a high risk device."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Rule 1 - Class III devices are high risk devices"
   } ],
   "http://www.w3.org/2003/11/swrl#body" : [ {
-    "@list" : [ {
-      "@id" : "_:genid17"
-    }, {
-      "@id" : "_:genid15"
-    } ]
+    "@id" : "_:genid15"
   } ],
   "http://www.w3.org/2003/11/swrl#head" : [ {
-    "@list" : [ {
-      "@id" : "_:genid19"
-    } ]
+    "@id" : "_:genid17"
   } ]
 }, {
-  "@id" : "_:genid15",
-  "@type" : [ "http://www.w3.org/2003/11/swrl#IndividualPropertyAtom" ],
+  "@id" : "_:genid13",
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#first" : [ {
+    "@id" : "_:genid14"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest" : [ {
+    "@list" : [ ]
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2003/11/swrl#AtomList"
+  } ]
+}, {
+  "@id" : "_:genid14",
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"
+  } ],
   "http://www.w3.org/2003/11/swrl#argument1" : [ {
     "@id" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#d"
   } ],
@@ -64,8 +77,21 @@
     "@id" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasRiskClass"
   } ]
 }, {
-  "@id" : "_:genid17",
-  "@type" : [ "http://www.w3.org/2003/11/swrl#ClassAtom" ],
+  "@id" : "_:genid15",
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#first" : [ {
+    "@id" : "_:genid16"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest" : [ {
+    "@id" : "_:genid13"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2003/11/swrl#AtomList"
+  } ]
+}, {
+  "@id" : "_:genid16",
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2003/11/swrl#ClassAtom"
+  } ],
   "http://www.w3.org/2003/11/swrl#argument1" : [ {
     "@id" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#d"
   } ],
@@ -73,13 +99,45 @@
     "@id" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Device"
   } ]
 }, {
-  "@id" : "_:genid19",
-  "@type" : [ "http://www.w3.org/2003/11/swrl#ClassAtom" ],
+  "@id" : "_:genid17",
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#first" : [ {
+    "@id" : "_:genid18"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest" : [ {
+    "@list" : [ ]
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2003/11/swrl#AtomList"
+  } ]
+}, {
+  "@id" : "_:genid18",
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2003/11/swrl#ClassAtom"
+  } ],
   "http://www.w3.org/2003/11/swrl#argument1" : [ {
     "@id" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#d"
   } ],
   "http://www.w3.org/2003/11/swrl#classPredicate" : [ {
     "@id" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#HighRiskDevice"
+  } ]
+}, {
+  "@id" : "_:genid19",
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2003/11/swrl#Imp"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "If an incident is related to a critical risk, it is inferred as a high priority incident."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Rule 3 - Critical risks generate high priority incidents"
+  } ],
+  "http://www.w3.org/2003/11/swrl#body" : [ {
+    "@id" : "_:genid24"
+  } ],
+  "http://www.w3.org/2003/11/swrl#head" : [ {
+    "@id" : "_:genid26"
   } ]
 }, {
   "@id" : "_:genid2",
@@ -92,32 +150,20 @@
   } ]
 }, {
   "@id" : "_:genid20",
-  "@type" : [ "http://www.w3.org/2003/11/swrl#Imp" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "If an incident is related to a critical risk, it is inferred as a high priority incident."
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#first" : [ {
+    "@id" : "_:genid21"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Rule 3 - Critical risks generate high priority incidents"
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest" : [ {
+    "@list" : [ ]
   } ],
-  "http://www.w3.org/2003/11/swrl#body" : [ {
-    "@list" : [ {
-      "@id" : "_:genid26"
-    }, {
-      "@id" : "_:genid24"
-    }, {
-      "@id" : "_:genid22"
-    } ]
-  } ],
-  "http://www.w3.org/2003/11/swrl#head" : [ {
-    "@list" : [ {
-      "@id" : "_:genid28"
-    } ]
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2003/11/swrl#AtomList"
   } ]
 }, {
-  "@id" : "_:genid22",
-  "@type" : [ "http://www.w3.org/2003/11/swrl#ClassAtom" ],
+  "@id" : "_:genid21",
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2003/11/swrl#ClassAtom"
+  } ],
   "http://www.w3.org/2003/11/swrl#argument1" : [ {
     "@id" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#r"
   } ],
@@ -125,8 +171,21 @@
     "@id" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#CriticalRisk"
   } ]
 }, {
-  "@id" : "_:genid24",
-  "@type" : [ "http://www.w3.org/2003/11/swrl#IndividualPropertyAtom" ],
+  "@id" : "_:genid22",
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#first" : [ {
+    "@id" : "_:genid23"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest" : [ {
+    "@id" : "_:genid20"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2003/11/swrl#AtomList"
+  } ]
+}, {
+  "@id" : "_:genid23",
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"
+  } ],
   "http://www.w3.org/2003/11/swrl#argument1" : [ {
     "@id" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#i"
   } ],
@@ -137,8 +196,21 @@
     "@id" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#relatedToRisk"
   } ]
 }, {
-  "@id" : "_:genid26",
-  "@type" : [ "http://www.w3.org/2003/11/swrl#ClassAtom" ],
+  "@id" : "_:genid24",
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#first" : [ {
+    "@id" : "_:genid25"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest" : [ {
+    "@id" : "_:genid22"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2003/11/swrl#AtomList"
+  } ]
+}, {
+  "@id" : "_:genid25",
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2003/11/swrl#ClassAtom"
+  } ],
   "http://www.w3.org/2003/11/swrl#argument1" : [ {
     "@id" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#i"
   } ],
@@ -146,8 +218,21 @@
     "@id" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Incident"
   } ]
 }, {
-  "@id" : "_:genid28",
-  "@type" : [ "http://www.w3.org/2003/11/swrl#ClassAtom" ],
+  "@id" : "_:genid26",
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#first" : [ {
+    "@id" : "_:genid27"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest" : [ {
+    "@list" : [ ]
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2003/11/swrl#AtomList"
+  } ]
+}, {
+  "@id" : "_:genid27",
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2003/11/swrl#ClassAtom"
+  } ],
   "http://www.w3.org/2003/11/swrl#argument1" : [ {
     "@id" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#i"
   } ],
@@ -174,16 +259,9 @@
   } ]
 }, {
   "@id" : "_:genid5",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#relatedToRisk"
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2003/11/swrl#Imp"
   } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Risk"
-  } ]
-}, {
-  "@id" : "_:genid6",
-  "@type" : [ "http://www.w3.org/2003/11/swrl#Imp" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "If a device has a manufacturer, the inverse manufacturing relation can be inferred."
@@ -193,20 +271,27 @@
     "@value" : "Rule 2 - Manufacturers manufacture their devices"
   } ],
   "http://www.w3.org/2003/11/swrl#body" : [ {
-    "@list" : [ {
-      "@id" : "_:genid10"
-    }, {
-      "@id" : "_:genid8"
-    } ]
+    "@id" : "_:genid8"
   } ],
   "http://www.w3.org/2003/11/swrl#head" : [ {
-    "@list" : [ {
-      "@id" : "_:genid12"
-    } ]
+    "@id" : "_:genid10"
   } ]
 }, {
-  "@id" : "_:genid8",
-  "@type" : [ "http://www.w3.org/2003/11/swrl#IndividualPropertyAtom" ],
+  "@id" : "_:genid6",
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#first" : [ {
+    "@id" : "_:genid7"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest" : [ {
+    "@list" : [ ]
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2003/11/swrl#AtomList"
+  } ]
+}, {
+  "@id" : "_:genid7",
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"
+  } ],
   "http://www.w3.org/2003/11/swrl#argument1" : [ {
     "@id" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#d"
   } ],
@@ -217,41 +302,39 @@
     "@id" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasManufacturer"
   } ]
 }, {
-  "@id" : "http://dbpedia.org/resource/Manufacturer",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/2002/07/owl#sameAs" : [ {
-    "@id" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Manufacturer"
+  "@id" : "_:genid8",
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#first" : [ {
+    "@id" : "_:genid9"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest" : [ {
+    "@id" : "_:genid6"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2003/11/swrl#AtomList"
   } ]
 }, {
-  "@id" : "http://dbpedia.org/resource/Medical_device",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/2002/07/owl#sameAs" : [ {
+  "@id" : "_:genid9",
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2003/11/swrl#ClassAtom"
+  } ],
+  "http://www.w3.org/2003/11/swrl#argument1" : [ {
+    "@id" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#d"
+  } ],
+  "http://www.w3.org/2003/11/swrl#classPredicate" : [ {
     "@id" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Device"
   } ]
 }, {
-  "@id" : "http://dbpedia.org/resource/Medtronic",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/2002/07/owl#sameAs" : [ {
-    "@id" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Medtronic_plc"
-  } ]
-}, {
-  "@id" : "http://dbpedia.org/resource/Risk",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/2002/07/owl#sameAs" : [ {
-    "@id" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Risk"
-  } ]
-}, {
-  "@id" : "http://dbpedia.org/resource/Ventricular_assist_device",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/2002/07/owl#sameAs" : [ {
-    "@id" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#HeartMate3_LVAD"
-  } ]
+  "@id" : "http://purl.org/dc/terms/license",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
   "@id" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2",
   "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
+  "http://purl.org/dc/terms/license" : [ {
+    "@id" : "https://creativecommons.org/licenses/by/4.0/"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "OWL-DL ontology for high-risk medical devices and in vitro diagnostics based on the CSV files provided in the assignment."
+    "@value" : "OWL-DL ontology for representing medical devices, manufacturers, risks, incidents and corrective actions based on the CSV files provided in the assignment."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -269,14 +352,14 @@
     "@value" : "Active Device"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#DeviceType"
+    "@id" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Device"
   } ]
 }, {
   "@id" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#ClassI",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Represents the lowest MDR risk class."
+    "@value" : "Risk class I for medical devices."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -290,7 +373,7 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Represents the highest MDR risk class."
+    "@value" : "Risk class III for medical devices."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -304,7 +387,7 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Represents MDR risk class IIa."
+    "@value" : "Risk class IIa for medical devices."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -318,7 +401,7 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Represents MDR risk class IIb."
+    "@value" : "Risk class IIb for medical devices."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -332,14 +415,14 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Represents a clinical risk category."
+    "@value" : "Represents a clinical risk."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Clinical Risk"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#RiskType"
+    "@id" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Risk"
   } ]
 }, {
   "@id" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#CorrectiveAction",
@@ -353,9 +436,18 @@
     "@value" : "Corrective Action"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#MedicalEntity"
-  }, {
     "@id" : "_:genid1"
+  } ],
+  "http://www.w3.org/2002/07/owl#disjointWith" : [ {
+    "@id" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Device"
+  }, {
+    "@id" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Incident"
+  }, {
+    "@id" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Manufacturer"
+  }, {
+    "@id" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Risk"
+  }, {
+    "@id" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#RiskClass"
   } ]
 }, {
   "@id" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#CriticalRisk",
@@ -373,35 +465,45 @@
   } ]
 }, {
   "@id" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Device",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "Represents a medical device registered in the catalogue."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "Device1"
+    "@value" : "Device"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@id" : "http://dbpedia.org/resource/Medical_device"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#MedicalEntity"
-  }, {
     "@id" : "_:genid2"
   }, {
     "@id" : "_:genid3"
+  } ],
+  "http://www.w3.org/2002/07/owl#disjointWith" : [ {
+    "@id" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Incident"
+  }, {
+    "@id" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Manufacturer"
+  }, {
+    "@id" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Risk"
+  }, {
+    "@id" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#RiskClass"
   } ]
 }, {
   "@id" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#DeviceType",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Represents a category of medical device."
+    "@value" : "Represents a type or category of device."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Device Type"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#MedicalEntity"
+    "@id" : "http://www.w3.org/2002/07/owl#Thing"
   } ]
 }, {
   "@id" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#FSCA_001",
@@ -409,55 +511,32 @@
   "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasCorrectiveAction" : [ {
     "@id" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Incident_INC001"
   } ],
-  "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasDescription" : [ {
-    "@language" : "en",
-    "@value" : "Safety alert issued to all implanting centres regarding anticoagulation protocol update for HeartMate 3 to reduce thrombosis risk."
+  "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasDate" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2024-04-01"
   } ],
-  "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasEudamedReference" : [ {
-    "@value" : "EU-FSCA-2024-000001"
+  "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasDescription" : [ {
+    "@value" : "Safety alert issued to all implanting centres regarding anticoagulation protocol update for HeartMate 3 to reduce thrombosis risk."
   } ],
   "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasStatus" : [ {
     "@value" : "Open"
   } ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#CorrectiveAction"
-  }, {
-    "@id" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#SafetyAlertAction"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Corrective action instance created from acciones_correctivas.csv."
+    "@value" : "Example field safety corrective action extracted from the CSV files."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "FSCA-001"
-  } ]
-}, {
-  "@id" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Framework_MDR",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#MDRFramework"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "Individual representing MDR (EU 2017/745)."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "MDR framework"
+    "@value" : "FSCA 001"
   } ]
 }, {
   "@id" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#HeartMate3_LVAD",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasDescription" : [ {
-    "@language" : "en",
     "@value" : "Device extracted from dispositivos.csv (DEV-001)."
-  } ],
-  "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasEudamedReference" : [ {
-    "@value" : "DEV-001"
-  } ],
-  "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasIntendedPurpose" : [ {
-    "@value" : "Ventricular assist device for end-stage heart failure"
   } ],
   "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasManufacturer" : [ {
     "@id" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Medtronic_plc"
@@ -468,17 +547,14 @@
   "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasRiskClass" : [ {
     "@id" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#RiskClass_III"
   } ],
-  "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasUDI" : [ {
-    "@value" : "(01)00380740009095"
-  } ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Device"
   }, {
-    "@id" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#HighRiskDevice"
+    "@id" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#ImplantableDevice"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Device instance created from dispositivos.csv."
+    "@value" : "Example device extracted from the CSV files."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -503,7 +579,7 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Represents a device inferred as high risk."
+    "@value" : "Represents a device inferred or classified as high risk."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -524,67 +600,42 @@
     "@value" : "IVD Device"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#DeviceType"
-  } ]
-}, {
-  "@id" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#IVDRFramework",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "Represents the IVDR (EU 2017/746) regulatory framework."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "IVDR Framework"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#RegulatoryFramework"
+    "@id" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Device"
   } ]
 }, {
   "@id" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#ImplantableDevice",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Represents a device intended to be implanted."
+    "@value" : "Represents a device intended to be implanted in the body."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Implantable Device"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#DeviceType"
-  } ]
-}, {
-  "@id" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#InSituCorrectionAction",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "Represents an in-situ correction as corrective action."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "In Situ Correction Action"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#CorrectiveAction"
+    "@id" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Device"
   } ]
 }, {
   "@id" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Incident",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Represents an incident notified for a specific medical device."
+    "@value" : "Represents an incident associated with a medical device."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Incident"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#MedicalEntity"
-  }, {
     "@id" : "_:genid4"
+  } ],
+  "http://www.w3.org/2002/07/owl#disjointWith" : [ {
+    "@id" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Manufacturer"
   }, {
-    "@id" : "_:genid5"
+    "@id" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Risk"
+  }, {
+    "@id" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#RiskClass"
   } ]
 }, {
   "@id" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#IncidentType",
@@ -598,28 +649,17 @@
     "@value" : "Incident Type"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#MedicalEntity"
+    "@id" : "http://www.w3.org/2002/07/owl#Thing"
   } ]
 }, {
   "@id" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Incident_INC001",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasDate" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2024-03-12"
+  } ],
   "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasDescription" : [ {
-    "@language" : "en",
     "@value" : "Patient implanted with HeartMate 3 LVAD developed ischemic stroke six months post-implant. Device thrombus was confirmed by echocardiography."
-  } ],
-  "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasEudamedReference" : [ {
-    "@value" : "EU-INC-2024-000001"
-  } ],
-  "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasEventDate" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#date",
-    "@value" : "2024-01-08"
-  } ],
-  "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasOutcome" : [ {
-    "@value" : "Serious patient injury - embolic stroke"
-  } ],
-  "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasReportDate" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#date",
-    "@value" : "2024-01-15"
   } ],
   "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#relatedToDevice" : [ {
     "@id" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#HeartMate3_LVAD"
@@ -631,117 +671,46 @@
     "@id" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Medtronic_plc"
   } ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#HighPriorityIncident"
-  }, {
-    "@id" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Incident"
+    "@id" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#SeriousIncident"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Incident instance created from incidentes.csv."
+    "@value" : "Example incident extracted from the CSV files."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "INC-001"
-  } ]
-}, {
-  "@id" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#InfectionRisk",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "Represents a clinical infection risk."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Infection Risk"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#ClinicalRisk"
-  } ]
-}, {
-  "@id" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#InjuryRisk",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "Represents a clinical injury risk."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Injury Risk"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#ClinicalRisk"
-  } ]
-}, {
-  "@id" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#MDRFramework",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "Represents the MDR (EU 2017/745) regulatory framework."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "MDR Framework"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#RegulatoryFramework"
-  } ]
-}, {
-  "@id" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#MalfunctionRisk",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "Represents a technical malfunction risk."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Malfunction Risk"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#TechnicalRisk"
+    "@value" : "Incident INC001"
   } ]
 }, {
   "@id" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Manufacturer",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "Represents a manufacturer of medical devices."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "Manufacturer1"
+    "@value" : "Manufacturer"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@id" : "http://dbpedia.org/resource/Manufacturer"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#MedicalEntity"
-  } ]
-}, {
-  "@id" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#MedicalEntity",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "Top class for the main entities represented in the ontology."
+    "@id" : "http://www.w3.org/2002/07/owl#Thing"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Medical Entity"
+  "http://www.w3.org/2002/07/owl#disjointWith" : [ {
+    "@id" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Risk"
+  }, {
+    "@id" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#RiskClass"
   } ]
 }, {
   "@id" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Medtronic_plc",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasAuthorizationNumber" : [ {
-    "@value" : "IE/2017/001234"
+    "@value" : "SRN-IE-MF-000001"
   } ],
   "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasCountry" : [ {
     "@value" : "Ireland"
-  } ],
-  "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasDescription" : [ {
-    "@language" : "en",
-    "@value" : "Manufacturer extracted from fabricantes.csv."
-  } ],
-  "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasEmail" : [ {
-    "@value" : "regulatory@medtronic.com"
-  } ],
-  "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasEudamedReference" : [ {
-    "@value" : "SRN-IE-MED-0001"
   } ],
   "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasName" : [ {
     "@value" : "Medtronic plc"
@@ -751,7 +720,7 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Manufacturer instance created from fabricantes.csv."
+    "@value" : "Example manufacturer extracted from the CSV files."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -762,42 +731,28 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Represents a non-serious incident category."
+    "@value" : "Represents a non-serious incident reported for a device."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Non-Serious Incident"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#IncidentType"
-  } ]
-}, {
-  "@id" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#RecallAction",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "Represents a recall as corrective action."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Recall Action"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#CorrectiveAction"
+    "@id" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Incident"
   } ]
 }, {
   "@id" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#RegulatoryFramework",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Represents the regulatory framework under which a device is classified."
+    "@value" : "Represents the regulatory framework applicable to a device."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Regulatory Framework"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#MedicalEntity"
+    "@id" : "http://www.w3.org/2002/07/owl#Thing"
   } ]
 }, {
   "@id" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#ReusableDevice",
@@ -811,45 +766,54 @@
     "@value" : "Reusable Device"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#DeviceType"
+    "@id" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Device"
   } ]
 }, {
   "@id" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Risk",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "Represents a risk identified for a medical device."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "Risk1"
+    "@value" : "Risk"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@id" : "http://dbpedia.org/resource/Risk"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#MedicalEntity"
+    "@id" : "http://www.w3.org/2002/07/owl#Thing"
+  } ],
+  "http://www.w3.org/2002/07/owl#disjointWith" : [ {
+    "@id" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#RiskClass"
   } ]
 }, {
   "@id" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#RiskClass",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Represents a regulatory risk class for a device."
+    "@value" : "Represents a regulatory risk classification for a device."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Risk Class"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#MedicalEntity"
+    "@id" : "http://www.w3.org/2002/07/owl#Thing"
   } ]
 }, {
   "@id" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#RiskClass_III",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasName" : [ {
+    "@value" : "Class III"
+  } ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#RiskClass"
+    "@id" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#ClassIII"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Individual representing regulatory risk class III."
+    "@value" : "Instance representing risk class III."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -867,65 +831,44 @@
     "@value" : "Risk Type"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#MedicalEntity"
-  } ]
-}, {
-  "@id" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#SafetyAlertAction",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "Represents a safety alert as corrective action."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Safety Alert Action"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#CorrectiveAction"
+    "@id" : "http://www.w3.org/2002/07/owl#Thing"
   } ]
 }, {
   "@id" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#SeriousIncident",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Represents a serious incident category."
+    "@value" : "Represents a serious incident reported for a device."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Serious Incident"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#IncidentType"
+    "@id" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Incident"
   } ]
 }, {
   "@id" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#TechnicalRisk",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Represents a technical risk category."
+    "@value" : "Represents a technical risk."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Technical Risk"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#RiskType"
+    "@id" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Risk"
   } ]
 }, {
   "@id" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Thrombosis_DeviceRelated",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasDescription" : [ {
-    "@language" : "en",
     "@value" : "Thrombus formation on device surface causing embolic events."
-  } ],
-  "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasEudamedReference" : [ {
-    "@value" : "RSK-003"
   } ],
   "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasName" : [ {
     "@value" : "Thrombosis - device-related"
-  } ],
-  "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasProbability" : [ {
-    "@value" : "Low"
   } ],
   "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasSeverity" : [ {
     "@value" : "Critical"
@@ -937,29 +880,17 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Risk instance created from riesgos.csv."
+    "@value" : "Example risk extracted from the CSV files."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Thrombosis - device-related"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#UserNoticeAction",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "Represents a user notice as corrective action."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "User Notice Action"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#CorrectiveAction"
-  } ]
-}, {
   "@id" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#d",
-  "@type" : [ "http://www.w3.org/2003/11/swrl#Variable" ]
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2003/11/swrl#Variable"
+  } ]
 }, {
   "@id" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasAuthorizationNumber",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
@@ -996,7 +927,7 @@
   } ]
 }, {
   "@id" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasCountry",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "Stores the country of a manufacturer."
@@ -1012,6 +943,23 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
+  "@id" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasDate",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Stores a relevant date."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#Thing"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has date"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#date"
+  } ]
+}, {
   "@id" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasDescription",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -1024,78 +972,13 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "has description"
-  } ]
-}, {
-  "@id" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasEmail",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "Stores the contact email of a manufacturer."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Manufacturer"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "has email"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#string"
-  } ]
-}, {
-  "@id" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasEudamedReference",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "Stores a EUDAMED reference code."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.w3.org/2002/07/owl#Thing"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "has EUDAMED reference"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#string"
-  } ]
-}, {
-  "@id" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasEventDate",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "Stores the event date of an incident."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Incident"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "has event date"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#date"
-  } ]
-}, {
-  "@id" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasIntendedPurpose",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "Stores the intended purpose of a device."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Device"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "has intended purpose"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+    "@id" : "http://www.w3.org/2000/01/rdf-schema#Literal"
   } ]
 }, {
   "@id" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasManufacturer",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "Links a device to its manufacturer."
@@ -1109,10 +992,13 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Manufacturer"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#manufacturesDevice"
   } ]
 }, {
   "@id" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasName",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "Stores the name of an entity."
@@ -1125,62 +1011,11 @@
     "@value" : "has name"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#string"
-  } ]
-}, {
-  "@id" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasOutcome",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "Stores the outcome of an incident."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Incident"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "has outcome"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#string"
-  } ]
-}, {
-  "@id" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasProbability",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "Stores the probability level of a risk."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Risk"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "has probability"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#string"
-  } ]
-}, {
-  "@id" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasReportDate",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "Stores the report date of an incident."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Incident"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "has report date"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#date"
+    "@id" : "http://www.w3.org/2000/01/rdf-schema#Literal"
   } ]
 }, {
   "@id" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasRiskClass",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "Links a device to a regulatory risk class."
@@ -1200,7 +1035,7 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Stores the severity level of a risk."
+    "@value" : "Stores the severity of a risk."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Risk"
@@ -1230,51 +1065,21 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasUDI",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "Stores the UDI-DI identifier of a device."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Device"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "has UDI-DI"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#string"
-  } ]
-}, {
   "@id" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#i",
-  "@type" : [ "http://www.w3.org/2003/11/swrl#Variable" ]
-}, {
-  "@id" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#linkedToIncident",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "Links a corrective action to its related incident."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#CorrectiveAction"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "linked to incident"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Incident"
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2003/11/swrl#Variable"
   } ]
 }, {
   "@id" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#m",
-  "@type" : [ "http://www.w3.org/2003/11/swrl#Variable" ]
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2003/11/swrl#Variable"
+  } ]
 }, {
   "@id" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#manufacturesDevice",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Links a manufacturer to a device manufactured by it."
+    "@value" : "Links a manufacturer to a device it manufactures."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Manufacturer"
@@ -1288,13 +1093,15 @@
   } ]
 }, {
   "@id" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#r",
-  "@type" : [ "http://www.w3.org/2003/11/swrl#Variable" ]
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2003/11/swrl#Variable"
+  } ]
 }, {
   "@id" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#relatedToDevice",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Links an incident to the affected device."
+    "@value" : "Links an incident to the device involved in it."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Incident"
@@ -1311,7 +1118,7 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Links an incident to the associated risk."
+    "@value" : "Links an incident to an identified risk."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Incident"
@@ -1328,7 +1135,7 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Links an incident to the manufacturer that reported it."
+    "@value" : "Links an incident to the manufacturer or entity that reported it."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Incident"
@@ -1343,4 +1150,59 @@
 }, {
   "@id" : "http://www.w3.org/2001/XMLSchema#date",
   "@type" : [ "http://www.w3.org/2000/01/rdf-schema#Datatype" ]
+}, {
+  "@id" : "http://www.w3.org/2003/11/swrl#AtomList",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "SWRL atom list used to structure rule bodies and heads."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "SWRL Atom List"
+  } ]
+}, {
+  "@id" : "http://www.w3.org/2003/11/swrl#ClassAtom",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "SWRL class atom used in rule definitions."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "SWRL Class Atom"
+  } ]
+}, {
+  "@id" : "http://www.w3.org/2003/11/swrl#Imp",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "SWRL implication rule class used by the ontology rules."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "SWRL Imp"
+  } ]
+}, {
+  "@id" : "http://www.w3.org/2003/11/swrl#IndividualPropertyAtom",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "SWRL individual property atom used in rule definitions."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "SWRL Individual Property Atom"
+  } ]
+}, {
+  "@id" : "http://www.w3.org/2003/11/swrl#Variable",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "SWRL variable used in rule definitions."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "SWRL Variable"
+  } ]
 } ]

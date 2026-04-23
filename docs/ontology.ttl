@@ -7,8 +7,17 @@
 @base <http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#> .
 
 <http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2> rdf:type owl:Ontology ;
-                                                                  rdfs:comment "OWL-DL ontology for high-risk medical devices and in vitro diagnostics based on the CSV files provided in the assignment."@en ;
+                                                                  <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by/4.0/> ;
+                                                                  rdfs:comment "OWL-DL ontology for representing medical devices, manufacturers, risks, incidents and corrective actions based on the CSV files provided in the assignment."@en ;
                                                                   rdfs:label "Medical devices ontology for Exercise 2"@en .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/terms/license
+<http://purl.org/dc/terms/license> rdf:type owl:AnnotationProperty .
+
 
 #################################################################
 #    Datatypes
@@ -32,6 +41,8 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasManufacturer
 :hasManufacturer rdf:type owl:ObjectProperty ;
+                 owl:inverseOf :manufacturesDevice ;
+                 rdf:type owl:FunctionalProperty ;
                  rdfs:domain :Device ;
                  rdfs:range :Manufacturer ;
                  rdfs:comment "Links a device to its manufacturer."@en ;
@@ -39,26 +50,19 @@ xsd:date rdf:type rdfs:Datatype .
 
 
 ###  http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasRiskClass
-:hasRiskClass rdf:type owl:ObjectProperty ;
+:hasRiskClass rdf:type owl:ObjectProperty ,
+                       owl:FunctionalProperty ;
               rdfs:domain :Device ;
               rdfs:range :RiskClass ;
               rdfs:comment "Links a device to a regulatory risk class."@en ;
               rdfs:label "has risk class"@en .
 
 
-###  http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#linkedToIncident
-:linkedToIncident rdf:type owl:ObjectProperty ;
-                  rdfs:domain :CorrectiveAction ;
-                  rdfs:range :Incident ;
-                  rdfs:comment "Links a corrective action to its related incident."@en ;
-                  rdfs:label "linked to incident"@en .
-
-
 ###  http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#manufacturesDevice
 :manufacturesDevice rdf:type owl:ObjectProperty ;
                     rdfs:domain :Manufacturer ;
                     rdfs:range :Device ;
-                    rdfs:comment "Links a manufacturer to a device manufactured by it."@en ;
+                    rdfs:comment "Links a manufacturer to a device it manufactures."@en ;
                     rdfs:label "manufactures device"@en .
 
 
@@ -66,7 +70,7 @@ xsd:date rdf:type rdfs:Datatype .
 :relatedToDevice rdf:type owl:ObjectProperty ;
                  rdfs:domain :Incident ;
                  rdfs:range :Device ;
-                 rdfs:comment "Links an incident to the affected device."@en ;
+                 rdfs:comment "Links an incident to the device involved in it."@en ;
                  rdfs:label "related to device"@en .
 
 
@@ -74,7 +78,7 @@ xsd:date rdf:type rdfs:Datatype .
 :relatedToRisk rdf:type owl:ObjectProperty ;
                rdfs:domain :Incident ;
                rdfs:range :Risk ;
-               rdfs:comment "Links an incident to the associated risk."@en ;
+               rdfs:comment "Links an incident to an identified risk."@en ;
                rdfs:label "related to risk"@en .
 
 
@@ -82,7 +86,7 @@ xsd:date rdf:type rdfs:Datatype .
 :reportedBy rdf:type owl:ObjectProperty ;
             rdfs:domain :Incident ;
             rdfs:range :Manufacturer ;
-            rdfs:comment "Links an incident to the manufacturer that reported it."@en ;
+            rdfs:comment "Links an incident to the manufacturer or entity that reported it."@en ;
             rdfs:label "reported by"@en .
 
 
@@ -99,89 +103,44 @@ xsd:date rdf:type rdfs:Datatype .
 
 
 ###  http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasCountry
-:hasCountry rdf:type owl:DatatypeProperty ;
+:hasCountry rdf:type owl:DatatypeProperty ,
+                     owl:FunctionalProperty ;
             rdfs:domain :Manufacturer ;
             rdfs:range xsd:string ;
             rdfs:comment "Stores the country of a manufacturer."@en ;
             rdfs:label "has country"@en .
 
 
+###  http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasDate
+:hasDate rdf:type owl:DatatypeProperty ;
+         rdfs:domain owl:Thing ;
+         rdfs:range xsd:date ;
+         rdfs:comment "Stores a relevant date."@en ;
+         rdfs:label "has date"@en .
+
+
 ###  http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasDescription
 :hasDescription rdf:type owl:DatatypeProperty ;
                 rdfs:domain owl:Thing ;
+                rdfs:range rdfs:Literal ;
                 rdfs:comment "Stores a textual description."@en ;
                 rdfs:label "has description"@en .
 
 
-###  http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasEmail
-:hasEmail rdf:type owl:DatatypeProperty ;
-          rdfs:domain :Manufacturer ;
-          rdfs:range xsd:string ;
-          rdfs:comment "Stores the contact email of a manufacturer."@en ;
-          rdfs:label "has email"@en .
-
-
-###  http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasEudamedReference
-:hasEudamedReference rdf:type owl:DatatypeProperty ;
-                     rdfs:domain owl:Thing ;
-                     rdfs:range xsd:string ;
-                     rdfs:comment "Stores a EUDAMED reference code."@en ;
-                     rdfs:label "has EUDAMED reference"@en .
-
-
-###  http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasEventDate
-:hasEventDate rdf:type owl:DatatypeProperty ;
-              rdfs:domain :Incident ;
-              rdfs:range xsd:date ;
-              rdfs:comment "Stores the event date of an incident."@en ;
-              rdfs:label "has event date"@en .
-
-
-###  http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasIntendedPurpose
-:hasIntendedPurpose rdf:type owl:DatatypeProperty ;
-                    rdfs:domain :Device ;
-                    rdfs:range xsd:string ;
-                    rdfs:comment "Stores the intended purpose of a device."@en ;
-                    rdfs:label "has intended purpose"@en .
-
-
 ###  http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasName
-:hasName rdf:type owl:DatatypeProperty ;
+:hasName rdf:type owl:DatatypeProperty ,
+                  owl:FunctionalProperty ;
          rdfs:domain owl:Thing ;
-         rdfs:range xsd:string ;
+         rdfs:range rdfs:Literal ;
          rdfs:comment "Stores the name of an entity."@en ;
          rdfs:label "has name"@en .
-
-
-###  http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasOutcome
-:hasOutcome rdf:type owl:DatatypeProperty ;
-            rdfs:domain :Incident ;
-            rdfs:range xsd:string ;
-            rdfs:comment "Stores the outcome of an incident."@en ;
-            rdfs:label "has outcome"@en .
-
-
-###  http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasProbability
-:hasProbability rdf:type owl:DatatypeProperty ;
-                rdfs:domain :Risk ;
-                rdfs:range xsd:string ;
-                rdfs:comment "Stores the probability level of a risk."@en ;
-                rdfs:label "has probability"@en .
-
-
-###  http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasReportDate
-:hasReportDate rdf:type owl:DatatypeProperty ;
-               rdfs:domain :Incident ;
-               rdfs:range xsd:date ;
-               rdfs:comment "Stores the report date of an incident."@en ;
-               rdfs:label "has report date"@en .
 
 
 ###  http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasSeverity
 :hasSeverity rdf:type owl:DatatypeProperty ;
              rdfs:domain :Risk ;
              rdfs:range xsd:string ;
-             rdfs:comment "Stores the severity level of a risk."@en ;
+             rdfs:comment "Stores the severity of a risk."@en ;
              rdfs:label "has severity"@en .
 
 
@@ -193,21 +152,13 @@ xsd:date rdf:type rdfs:Datatype .
            rdfs:label "has status"@en .
 
 
-###  http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#hasUDI
-:hasUDI rdf:type owl:DatatypeProperty ;
-        rdfs:domain :Device ;
-        rdfs:range xsd:string ;
-        rdfs:comment "Stores the UDI-DI identifier of a device."@en ;
-        rdfs:label "has UDI-DI"@en .
-
-
 #################################################################
 #    Classes
 #################################################################
 
 ###  http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#ActiveDevice
 :ActiveDevice rdf:type owl:Class ;
-              rdfs:subClassOf :DeviceType ;
+              rdfs:subClassOf :Device ;
               rdfs:comment "Represents a device that depends on an energy source."@en ;
               rdfs:label "Active Device"@en .
 
@@ -215,45 +166,49 @@ xsd:date rdf:type rdfs:Datatype .
 ###  http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#ClassI
 :ClassI rdf:type owl:Class ;
         rdfs:subClassOf :RiskClass ;
-        rdfs:comment "Represents the lowest MDR risk class."@en ;
+        rdfs:comment "Risk class I for medical devices."@en ;
         rdfs:label "Class I"@en .
 
 
 ###  http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#ClassIII
 :ClassIII rdf:type owl:Class ;
           rdfs:subClassOf :RiskClass ;
-          rdfs:comment "Represents the highest MDR risk class."@en ;
+          rdfs:comment "Risk class III for medical devices."@en ;
           rdfs:label "Class III"@en .
 
 
 ###  http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#ClassIIa
 :ClassIIa rdf:type owl:Class ;
           rdfs:subClassOf :RiskClass ;
-          rdfs:comment "Represents MDR risk class IIa."@en ;
+          rdfs:comment "Risk class IIa for medical devices."@en ;
           rdfs:label "Class IIa"@en .
 
 
 ###  http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#ClassIIb
 :ClassIIb rdf:type owl:Class ;
           rdfs:subClassOf :RiskClass ;
-          rdfs:comment "Represents MDR risk class IIb."@en ;
+          rdfs:comment "Risk class IIb for medical devices."@en ;
           rdfs:label "Class IIb"@en .
 
 
 ###  http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#ClinicalRisk
 :ClinicalRisk rdf:type owl:Class ;
-              rdfs:subClassOf :RiskType ;
-              rdfs:comment "Represents a clinical risk category."@en ;
+              rdfs:subClassOf :Risk ;
+              rdfs:comment "Represents a clinical risk."@en ;
               rdfs:label "Clinical Risk"@en .
 
 
 ###  http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#CorrectiveAction
 :CorrectiveAction rdf:type owl:Class ;
-                  rdfs:subClassOf :MedicalEntity ,
-                                  [ rdf:type owl:Restriction ;
+                  rdfs:subClassOf [ rdf:type owl:Restriction ;
                                     owl:onProperty :hasCorrectiveAction ;
                                     owl:someValuesFrom :Incident
                                   ] ;
+                  owl:disjointWith :Device ,
+                                   :Incident ,
+                                   :Manufacturer ,
+                                   :Risk ,
+                                   :RiskClass ;
                   rdfs:comment "Represents a field safety corrective action linked to an incident."@en ;
                   rdfs:label "Corrective Action"@en .
 
@@ -267,21 +222,27 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Device
 :Device rdf:type owl:Class ;
-        rdfs:subClassOf :MedicalEntity ,
-                        [ rdf:type owl:Restriction ;
+        rdfs:subClassOf [ rdf:type owl:Restriction ;
                           owl:onProperty :hasManufacturer ;
                           owl:someValuesFrom :Manufacturer
                         ] ,
                         [ rdf:type owl:Restriction ;
                           owl:onProperty :hasRiskClass ;
                           owl:someValuesFrom :RiskClass
-                        ] .
+                        ] ;
+        owl:disjointWith :Incident ,
+                         :Manufacturer ,
+                         :Risk ,
+                         :RiskClass ;
+        rdfs:comment "Represents a medical device registered in the catalogue."@en ;
+        rdfs:label "Device"@en ;
+        rdfs:seeAlso <http://dbpedia.org/resource/Medical_device> .
 
 
 ###  http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#DeviceType
 :DeviceType rdf:type owl:Class ;
-            rdfs:subClassOf :MedicalEntity ;
-            rdfs:comment "Represents a category of medical device."@en ;
+            rdfs:subClassOf owl:Thing ;
+            rdfs:comment "Represents a type or category of device."@en ;
             rdfs:label "Device Type"@en .
 
 
@@ -295,292 +256,196 @@ xsd:date rdf:type rdfs:Datatype .
 ###  http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#HighRiskDevice
 :HighRiskDevice rdf:type owl:Class ;
                 rdfs:subClassOf :Device ;
-                rdfs:comment "Represents a device inferred as high risk."@en ;
+                rdfs:comment "Represents a device inferred or classified as high risk."@en ;
                 rdfs:label "High Risk Device"@en .
 
 
 ###  http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#IVDDevice
 :IVDDevice rdf:type owl:Class ;
-           rdfs:subClassOf :DeviceType ;
+           rdfs:subClassOf :Device ;
            rdfs:comment "Represents an in vitro diagnostic device."@en ;
            rdfs:label "IVD Device"@en .
 
 
-###  http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#IVDRFramework
-:IVDRFramework rdf:type owl:Class ;
-               rdfs:subClassOf :RegulatoryFramework ;
-               rdfs:comment "Represents the IVDR (EU 2017/746) regulatory framework."@en ;
-               rdfs:label "IVDR Framework"@en .
-
-
 ###  http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#ImplantableDevice
 :ImplantableDevice rdf:type owl:Class ;
-                   rdfs:subClassOf :DeviceType ;
-                   rdfs:comment "Represents a device intended to be implanted."@en ;
+                   rdfs:subClassOf :Device ;
+                   rdfs:comment "Represents a device intended to be implanted in the body."@en ;
                    rdfs:label "Implantable Device"@en .
-
-
-###  http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#InSituCorrectionAction
-:InSituCorrectionAction rdf:type owl:Class ;
-                        rdfs:subClassOf :CorrectiveAction ;
-                        rdfs:comment "Represents an in-situ correction as corrective action."@en ;
-                        rdfs:label "In Situ Correction Action"@en .
 
 
 ###  http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Incident
 :Incident rdf:type owl:Class ;
-          rdfs:subClassOf :MedicalEntity ,
-                          [ rdf:type owl:Restriction ;
+          rdfs:subClassOf [ rdf:type owl:Restriction ;
                             owl:onProperty :relatedToDevice ;
                             owl:someValuesFrom :Device
-                          ] ,
-                          [ rdf:type owl:Restriction ;
-                            owl:onProperty :relatedToRisk ;
-                            owl:someValuesFrom :Risk
                           ] ;
-          rdfs:comment "Represents an incident notified for a specific medical device."@en ;
+          owl:disjointWith :Manufacturer ,
+                           :Risk ,
+                           :RiskClass ;
+          rdfs:comment "Represents an incident associated with a medical device."@en ;
           rdfs:label "Incident"@en .
 
 
 ###  http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#IncidentType
 :IncidentType rdf:type owl:Class ;
-              rdfs:subClassOf :MedicalEntity ;
+              rdfs:subClassOf owl:Thing ;
               rdfs:comment "Represents a category of incident."@en ;
               rdfs:label "Incident Type"@en .
 
 
-###  http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#InfectionRisk
-:InfectionRisk rdf:type owl:Class ;
-               rdfs:subClassOf :ClinicalRisk ;
-               rdfs:comment "Represents a clinical infection risk."@en ;
-               rdfs:label "Infection Risk"@en .
-
-
-###  http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#InjuryRisk
-:InjuryRisk rdf:type owl:Class ;
-            rdfs:subClassOf :ClinicalRisk ;
-            rdfs:comment "Represents a clinical injury risk."@en ;
-            rdfs:label "Injury Risk"@en .
-
-
-###  http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#MDRFramework
-:MDRFramework rdf:type owl:Class ;
-              rdfs:subClassOf :RegulatoryFramework ;
-              rdfs:comment "Represents the MDR (EU 2017/745) regulatory framework."@en ;
-              rdfs:label "MDR Framework"@en .
-
-
-###  http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#MalfunctionRisk
-:MalfunctionRisk rdf:type owl:Class ;
-                 rdfs:subClassOf :TechnicalRisk ;
-                 rdfs:comment "Represents a technical malfunction risk."@en ;
-                 rdfs:label "Malfunction Risk"@en .
-
-
 ###  http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Manufacturer
 :Manufacturer rdf:type owl:Class ;
-              rdfs:subClassOf :MedicalEntity .
-
-
-###  http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#MedicalEntity
-:MedicalEntity rdf:type owl:Class ;
-               rdfs:comment "Top class for the main entities represented in the ontology."@en ;
-               rdfs:label "Medical Entity"@en .
+              rdfs:subClassOf owl:Thing ;
+              owl:disjointWith :Risk ,
+                               :RiskClass ;
+              rdfs:comment "Represents a manufacturer of medical devices."@en ;
+              rdfs:label "Manufacturer"@en ;
+              rdfs:seeAlso <http://dbpedia.org/resource/Manufacturer> .
 
 
 ###  http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#NonSeriousIncident
 :NonSeriousIncident rdf:type owl:Class ;
-                    rdfs:subClassOf :IncidentType ;
-                    rdfs:comment "Represents a non-serious incident category."@en ;
+                    rdfs:subClassOf :Incident ;
+                    rdfs:comment "Represents a non-serious incident reported for a device."@en ;
                     rdfs:label "Non-Serious Incident"@en .
-
-
-###  http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#RecallAction
-:RecallAction rdf:type owl:Class ;
-              rdfs:subClassOf :CorrectiveAction ;
-              rdfs:comment "Represents a recall as corrective action."@en ;
-              rdfs:label "Recall Action"@en .
 
 
 ###  http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#RegulatoryFramework
 :RegulatoryFramework rdf:type owl:Class ;
-                     rdfs:subClassOf :MedicalEntity ;
-                     rdfs:comment "Represents the regulatory framework under which a device is classified."@en ;
+                     rdfs:subClassOf owl:Thing ;
+                     rdfs:comment "Represents the regulatory framework applicable to a device."@en ;
                      rdfs:label "Regulatory Framework"@en .
 
 
 ###  http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#ReusableDevice
 :ReusableDevice rdf:type owl:Class ;
-                rdfs:subClassOf :DeviceType ;
+                rdfs:subClassOf :Device ;
                 rdfs:comment "Represents a device intended for repeated use."@en ;
                 rdfs:label "Reusable Device"@en .
 
 
 ###  http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Risk
 :Risk rdf:type owl:Class ;
-      rdfs:subClassOf :MedicalEntity .
+      rdfs:subClassOf owl:Thing ;
+      owl:disjointWith :RiskClass ;
+      rdfs:comment "Represents a risk identified for a medical device."@en ;
+      rdfs:label "Risk"@en ;
+      rdfs:seeAlso <http://dbpedia.org/resource/Risk> .
 
 
 ###  http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#RiskClass
 :RiskClass rdf:type owl:Class ;
-           rdfs:subClassOf :MedicalEntity ;
-           rdfs:comment "Represents a regulatory risk class for a device."@en ;
+           rdfs:subClassOf owl:Thing ;
+           rdfs:comment "Represents a regulatory risk classification for a device."@en ;
            rdfs:label "Risk Class"@en .
 
 
 ###  http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#RiskType
 :RiskType rdf:type owl:Class ;
-          rdfs:subClassOf :MedicalEntity ;
+          rdfs:subClassOf owl:Thing ;
           rdfs:comment "Represents a category of risk."@en ;
           rdfs:label "Risk Type"@en .
 
 
-###  http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#SafetyAlertAction
-:SafetyAlertAction rdf:type owl:Class ;
-                   rdfs:subClassOf :CorrectiveAction ;
-                   rdfs:comment "Represents a safety alert as corrective action."@en ;
-                   rdfs:label "Safety Alert Action"@en .
-
-
 ###  http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#SeriousIncident
 :SeriousIncident rdf:type owl:Class ;
-                 rdfs:subClassOf :IncidentType ;
-                 rdfs:comment "Represents a serious incident category."@en ;
+                 rdfs:subClassOf :Incident ;
+                 rdfs:comment "Represents a serious incident reported for a device."@en ;
                  rdfs:label "Serious Incident"@en .
 
 
 ###  http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#TechnicalRisk
 :TechnicalRisk rdf:type owl:Class ;
-               rdfs:subClassOf :RiskType ;
-               rdfs:comment "Represents a technical risk category."@en ;
+               rdfs:subClassOf :Risk ;
+               rdfs:comment "Represents a technical risk."@en ;
                rdfs:label "Technical Risk"@en .
 
 
-###  http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#UserNoticeAction
-:UserNoticeAction rdf:type owl:Class ;
-                  rdfs:subClassOf :CorrectiveAction ;
-                  rdfs:comment "Represents a user notice as corrective action."@en ;
-                  rdfs:label "User Notice Action"@en .
+###  http://www.w3.org/2003/11/swrl#AtomList
+<http://www.w3.org/2003/11/swrl#AtomList> rdf:type owl:Class ;
+                                          rdfs:comment "SWRL atom list used to structure rule bodies and heads."@en ;
+                                          rdfs:label "SWRL Atom List"@en .
+
+
+###  http://www.w3.org/2003/11/swrl#ClassAtom
+<http://www.w3.org/2003/11/swrl#ClassAtom> rdf:type owl:Class ;
+                                           rdfs:comment "SWRL class atom used in rule definitions."@en ;
+                                           rdfs:label "SWRL Class Atom"@en .
+
+
+###  http://www.w3.org/2003/11/swrl#Imp
+<http://www.w3.org/2003/11/swrl#Imp> rdf:type owl:Class ;
+                                     rdfs:comment "SWRL implication rule class used by the ontology rules."@en ;
+                                     rdfs:label "SWRL Imp"@en .
+
+
+###  http://www.w3.org/2003/11/swrl#IndividualPropertyAtom
+<http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> rdf:type owl:Class ;
+                                                        rdfs:comment "SWRL individual property atom used in rule definitions."@en ;
+                                                        rdfs:label "SWRL Individual Property Atom"@en .
+
+
+###  http://www.w3.org/2003/11/swrl#Variable
+<http://www.w3.org/2003/11/swrl#Variable> rdf:type owl:Class ;
+                                          rdfs:comment "SWRL variable used in rule definitions."@en ;
+                                          rdfs:label "SWRL Variable"@en .
 
 
 #################################################################
 #    Individuals
 #################################################################
 
-###  http://dbpedia.org/resource/Manufacturer
-<http://dbpedia.org/resource/Manufacturer> rdf:type owl:NamedIndividual ;
-                                           owl:sameAs :Manufacturer .
-
-
-###  http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Manufacturer
-
-###  http://dbpedia.org/resource/Medical_device
-<http://dbpedia.org/resource/Medical_device> rdf:type owl:NamedIndividual ;
-                                             owl:sameAs :Device .
-
-
-###  http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Device
-
-###  http://dbpedia.org/resource/Medtronic
-<http://dbpedia.org/resource/Medtronic> rdf:type owl:NamedIndividual ;
-                                        owl:sameAs :Medtronic_plc .
-
-
-###  http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Medtronic_plc
-
-###  http://dbpedia.org/resource/Risk
-<http://dbpedia.org/resource/Risk> rdf:type owl:NamedIndividual ;
-                                   owl:sameAs :Risk .
-
-
-###  http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Risk
-
-###  http://dbpedia.org/resource/Ventricular_assist_device
-<http://dbpedia.org/resource/Ventricular_assist_device> rdf:type owl:NamedIndividual ;
-                                                        owl:sameAs :HeartMate3_LVAD .
-
-
-###  http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#HeartMate3_LVAD
-
-###  http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Device
-:Device rdf:type owl:NamedIndividual .
-
-
 ###  http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#FSCA_001
 :FSCA_001 rdf:type owl:NamedIndividual ,
-                   :CorrectiveAction ,
-                   :SafetyAlertAction ;
+                   :CorrectiveAction ;
           :hasCorrectiveAction :Incident_INC001 ;
-          :hasDescription "Safety alert issued to all implanting centres regarding anticoagulation protocol update for HeartMate 3 to reduce thrombosis risk."@en ;
-          :hasEudamedReference "EU-FSCA-2024-000001" ;
+          :hasDate "2024-04-01"^^xsd:date ;
+          :hasDescription "Safety alert issued to all implanting centres regarding anticoagulation protocol update for HeartMate 3 to reduce thrombosis risk." ;
           :hasStatus "Open" ;
-          rdfs:comment "Corrective action instance created from acciones_correctivas.csv."@en ;
-          rdfs:label "FSCA-001"@en .
-
-
-###  http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Framework_MDR
-:Framework_MDR rdf:type owl:NamedIndividual ,
-                        :MDRFramework ;
-               rdfs:comment "Individual representing MDR (EU 2017/745)."@en ;
-               rdfs:label "MDR framework"@en .
+          rdfs:comment "Example field safety corrective action extracted from the CSV files."@en ;
+          rdfs:label "FSCA 001"@en .
 
 
 ###  http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#HeartMate3_LVAD
 :HeartMate3_LVAD rdf:type owl:NamedIndividual ,
                           :Device ,
-                          :HighRiskDevice ;
+                          :ImplantableDevice ;
                  :hasManufacturer :Medtronic_plc ;
                  :hasRiskClass :RiskClass_III ;
-                 :hasDescription "Device extracted from dispositivos.csv (DEV-001)."@en ;
-                 :hasEudamedReference "DEV-001" ;
-                 :hasIntendedPurpose "Ventricular assist device for end-stage heart failure" ;
+                 :hasDescription "Device extracted from dispositivos.csv (DEV-001)." ;
                  :hasName "HeartMate 3 LVAD" ;
-                 :hasUDI "(01)00380740009095" ;
-                 rdfs:comment "Device instance created from dispositivos.csv."@en ;
+                 rdfs:comment "Example device extracted from the CSV files."@en ;
                  rdfs:label "HeartMate 3 LVAD"@en .
 
 
 ###  http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Incident_INC001
 :Incident_INC001 rdf:type owl:NamedIndividual ,
-                          :HighPriorityIncident ,
-                          :Incident ;
+                          :SeriousIncident ;
                  :relatedToDevice :HeartMate3_LVAD ;
                  :relatedToRisk :Thrombosis_DeviceRelated ;
                  :reportedBy :Medtronic_plc ;
-                 :hasDescription "Patient implanted with HeartMate 3 LVAD developed ischemic stroke six months post-implant. Device thrombus was confirmed by echocardiography."@en ;
-                 :hasEudamedReference "EU-INC-2024-000001" ;
-                 :hasEventDate "2024-01-08"^^xsd:date ;
-                 :hasOutcome "Serious patient injury - embolic stroke" ;
-                 :hasReportDate "2024-01-15"^^xsd:date ;
-                 rdfs:comment "Incident instance created from incidentes.csv."@en ;
-                 rdfs:label "INC-001"@en .
-
-
-###  http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Manufacturer
-:Manufacturer rdf:type owl:NamedIndividual .
+                 :hasDate "2024-03-12"^^xsd:date ;
+                 :hasDescription "Patient implanted with HeartMate 3 LVAD developed ischemic stroke six months post-implant. Device thrombus was confirmed by echocardiography." ;
+                 rdfs:comment "Example incident extracted from the CSV files."@en ;
+                 rdfs:label "Incident INC001"@en .
 
 
 ###  http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Medtronic_plc
 :Medtronic_plc rdf:type owl:NamedIndividual ,
                         :Manufacturer ;
-               :hasAuthorizationNumber "IE/2017/001234" ;
+               :hasAuthorizationNumber "SRN-IE-MF-000001" ;
                :hasCountry "Ireland" ;
-               :hasDescription "Manufacturer extracted from fabricantes.csv."@en ;
-               :hasEmail "regulatory@medtronic.com" ;
-               :hasEudamedReference "SRN-IE-MED-0001" ;
                :hasName "Medtronic plc" ;
-               rdfs:comment "Manufacturer instance created from fabricantes.csv."@en ;
+               rdfs:comment "Example manufacturer extracted from the CSV files."@en ;
                rdfs:label "Medtronic plc"@en .
-
-
-###  http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#Risk
-:Risk rdf:type owl:NamedIndividual .
 
 
 ###  http://www.semanticweb.org/miki/ontologies/2026/3/ejercicio2.2#RiskClass_III
 :RiskClass_III rdf:type owl:NamedIndividual ,
-                        :RiskClass ;
-               rdfs:comment "Individual representing regulatory risk class III."@en ;
+                        :ClassIII ;
+               :hasName "Class III" ;
+               rdfs:comment "Instance representing risk class III."@en ;
                rdfs:label "Risk Class III"@en .
 
 
@@ -588,29 +453,11 @@ xsd:date rdf:type rdfs:Datatype .
 :Thrombosis_DeviceRelated rdf:type owl:NamedIndividual ,
                                    :CriticalRisk ,
                                    :Risk ;
-                          :hasDescription "Thrombus formation on device surface causing embolic events."@en ;
-                          :hasEudamedReference "RSK-003" ;
+                          :hasDescription "Thrombus formation on device surface causing embolic events." ;
                           :hasName "Thrombosis - device-related" ;
-                          :hasProbability "Low" ;
                           :hasSeverity "Critical" ;
-                          rdfs:comment "Risk instance created from riesgos.csv."@en ;
+                          rdfs:comment "Example risk extracted from the CSV files."@en ;
                           rdfs:label "Thrombosis - device-related"@en .
-
-
-#################################################################
-#    Annotations
-#################################################################
-
-:Device rdfs:comment "Represents a medical device registered in the catalogue."@en ;
-        rdfs:label "Device1"@en .
-
-
-:Manufacturer rdfs:comment "Represents a manufacturer of medical devices."@en ;
-              rdfs:label "Manufacturer1"@en .
-
-
-:Risk rdfs:comment "Represents a risk identified for a medical device."@en ;
-      rdfs:label "Risk1"@en .
 
 
 #################################################################
@@ -625,7 +472,7 @@ xsd:date rdf:type rdfs:Datatype .
 
 :r rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
 
-[ rdfs:comment "If a device has risk class III, then it is inferred as a high risk device."@en ;
+[ rdfs:comment "If a device has risk class III, it is inferred as a high risk device."@en ;
    rdfs:label "Rule 1 - Class III devices are high risk devices"@en ;
    rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
    <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
