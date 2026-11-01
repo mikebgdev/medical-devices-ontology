@@ -17,4 +17,8 @@ for name in files:
         continue
     assert not re.search(r"(^|/)(id_rsa|id_ed25519|credentials\.json|service-account[^/]*\.json)$", name, re.I), "Private credential filename tracked: " + name
     assert not name.endswith((".jks", ".keystore", ".p12", ".pfx")), "Private signing material tracked: " + name
+    base = Path(name).name
+    env_template = base.endswith((".example", ".sample", ".dist"))
+    reviewed_env = name in {".env", ".env.test"} and (root / "composer.json").exists()
+    assert not (base.startswith(".env") and not env_template and not reviewed_env), "Runtime env file tracked: " + name
 print("README, licensing review, JSON manifests and credential filenames: OK")
