@@ -15,4 +15,8 @@ Ontología de dispositivos médicos en RDF, con documentación HTML generada y v
 
  La existencia del archivo de workflow no acredita que el runner esté disponible ni que la revisión haya pasado. Antes de integrar, comprobar los resultados **Secrets** y **Verify** del mismo SHA. Este workflow no despliega servicios. Conservar el procedimiento de entrega y rollback específico del proyecto.
 
- La [recomendación de licencia](docs/LICENSING.md) distingue código propio y materiales de terceros. No se ha aplicado una licencia nueva ni cambiado la visibilidad del repositorio.
+
+<!-- license-adopted-20261101 -->
+## Licencia
+
+**CC-BY-4.0**, con el alcance indicado en [docs/LICENSING.md](docs/LICENSING.md). El texto completo está en [LICENSE](LICENSE). La concesión cubre las aportaciones propias; los recursos y componentes de terceros conservan sus licencias y atribuciones.
